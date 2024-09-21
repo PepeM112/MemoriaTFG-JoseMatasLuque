@@ -37,7 +37,7 @@
 % Dependiendo de las partes de la plantilla, a veces aparecerán tal
 % cual los escribas, a veces totalmente en mayúsculas, a veces de otras
 % formas
-\title{Título del Trabajo con Letras Mayúsculas para Sustantivos y Adjetivos}
+\title{Rediseño de aplicación de análisis de código Python}
 \author{ José Matas Luque}
 
 % Guarda el título, el autor y la fecha en variables
@@ -69,11 +69,11 @@ ESCUELA DE INGENIERÍA DE FUENLABRADA
 \vspace{1cm}
 
 \LARGE
-TITULACIÓN EN MAYÚSCULAS
+Ingeniería en Tecnologías de la Telecomunicación
 
 \vspace{1cm}
 \LARGE
-\textbf{TRABAJO FIN DE GRADO/MÁSTER}
+\textbf{TRABAJO FIN DE GRADO}
 
 \vspace{2cm}
 
@@ -380,7 +380,7 @@ Así:
 
 % Recuerda que los objetivos siempre vienen en infinitivo.
 
-El objetivo general del trabajo es realizar una revisión, reestructuración y extensión de funcionalidad del proyecto ya existente. Dicho proyecto se puede definir como una herramienta de análisis de código escrito en lenguaje Python.
+El objetivo general del trabajo es realizar una revisión, reestructuración y extensión de funcionalidad del proyecto ya existente. Dicho proyecto se puede definir como una herramienta de análisis de código escrito en lenguaje Python, otorgando un nivel al código de acorde al estándar CEFR (Common European Framework of Reference).
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
@@ -401,6 +401,7 @@ Los objetivos específicos de este trabajo se pueden definir de la siguiente man
     \item  Reestructurar la arquitectura del código, reorganizando el árbol de directorios para asegurar una disposición lógica y coherente de los archivos, de acuerdo con los estándares recomendados en la industria. 
     \item Eliminar redundancias en el código e incorporar documentación detallada. 
     \item Ampliar el análisis con información adicional sobre el repositorio GitHub examinado, incluyendo datos relevantes sobre el autor y otros metadatos. \end{itemize}
+    \item Ampliar el análisis con nuevos elementos del lenguaje Python no considerados en la primera versión.
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
@@ -542,6 +543,15 @@ En el contexto de este proyecto Express ha sido fundamental para:
 
 \section{JSON}
 JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos que es fácil de leer y escribir para los humanos, y sencillo de interpretar y generar por las máquinas. Su estructura basada en pares clave-valor lo hace ideal para transportar datos entre un servidor y una aplicación web, o entre distintos componentes de un sistema distribuido. JSON es ampliamente utilizado en APIs y servicios web debido a su simplicidad y compatibilidad con mútliples lenguajes de programación.
+
+Por ejemplo, si quisiéramos almacenar la información de una persona podríamos utilizar una estructura similar a:
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[height=4cm, keepaspectratio]{img/example_json.png}
+    \caption{Ejemplo de objeto con formato JSON}
+    \label{fig:enter-label}
+\end{figure}
 
 En este proyecto JSON ha sido crucial en dos aspectos:
 
@@ -695,9 +705,9 @@ En lo relativo al backend encontramos la parte del proyecto encargada de procesa
 
 Utilizamos el término "frontend" para la parte del proyecto encargada de la web. En nuestro caso usamos la web para la navegación y visualización de los archivos producidos como resultado de los análisis.
 
-La versión original del frontend es funcional, en el sentido de que cumple su labor, pero presentaba una estructura muy básica y poco modular. Todo el código estaba contenido en un único archivo `main.js`, que generaba dinámicamente un archivo HTML e insertaba directamente toda la información en la página. Esto no solo dificultaba la escalabilidad del proyecto, sino que también limitaba la separación de responsabilidades entre las diferentes partes del frontend y hacía más complicado el mantenimiento del código a largo plazo.
+La versión original del frontend es funcional, en el sentido de que cumple su labor, pero presentaba una estructura muy básica y poco modular. Todo el código relevante estaba contenido en un único archivo `main.js`, que generaba dinámicamente un archivo HTML a partir de unas plantillas e insertaba directamente toda la información en la página. Esto no solo dificultaba la escalabilidad del proyecto, sino que también limitaba la separación de responsabilidades entre las diferentes partes del frontend y hacía más complicado el mantenimiento del código a largo plazo.
 
-En el rediseño completo del frontend, hemos implementado una estructura más profesional y escalable. Se han organizado los recursos del proyecto en carpetas separadas, como `public`, `assets`, `html`, `css` y `js`, siguiendo las buenas prácticas del desarrollo web moderno. Asimismo, se ha incluido un archivo `package.json`, fundamental para gestionar las dependencias del proyecto y definir los scripts necesarios para su ejecución. El uso de `npm` como gestor de dependencias permite que el proyecto sea fácilmente reproducible en cualquier entorno, garantizando que todas las bibliotecas y módulos requeridos puedan ser instalados de manera automática y coherente.
+En este rediseño completo del frontend hemos implementado una estructura más profesional y escalable. Se han organizado los recursos del proyecto en carpetas separadas, como `public`, `assets`, `html`, `css` y `js`, siguiendo las buenas prácticas del desarrollo web moderno. Asimismo, se ha incluido un archivo `package.json`, fundamental para gestionar las dependencias del proyecto y definir los scripts necesarios para su ejecución. El uso de `npm` como gestor de dependencias permite que el proyecto sea fácilmente reproducible en cualquier entorno, garantizando que todas las bibliotecas y módulos requeridos puedan ser instalados de manera automática y coherente.
 
 Para el servidor, hemos adoptado `Express.js` como framework, creando un archivo `server.js` dedicado a cargar y gestionar el servidor web, lo que no existía en la versión anterior. También se han implementado rutas específicas para la API (`apiRoutes.js`) y para servir las páginas HTML (`htmlRoutes.js`), lo que proporciona una clara separación entre la lógica de backend y la presentación de los datos. Esto mejora el manejo de peticiones y la organización del código, haciendo más eficiente la gestión del servidor y la comunicación entre las distintas capas de la aplicación.
 
@@ -726,8 +736,44 @@ En la siguiente comparativa se puede observar el cambio significativo en la estr
   \end{minipage}
 \end{figure}
 
+Toda esta reestructuración implica naturalmente un cambio absoluto en el funcionamiento de esta sección. En las siguientes imágenes podemos ver una comparativa de ambos flujos de trabajo:
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=19cm, keepaspectratio]{img/esquema_frontend_original.jpg}
+    \caption{Flujo del frontend original}
+    \label{fig:new_structure}
+\end{figure}
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{img/esquema_frontend_final.jpg}
+    \caption{Flujo del frontend rediseñado}
+    \label{fig:new_structure}
+\end{figure}
 
+En el \textbf{flujo original} ejecutamos casi exclusivamente el archivo 'main.js', el cual realiza todo el trabajo. Éste busca en el sistema archivos de resultados JSON y extrae de ellos la información relevante a mostrar. Tras esto carga unas plantillas para crear dos archivos HTML:
+
+\begin{itemize}
+    \item Un archivo 'index.html' que consta de un breve resumen de la información los análisis realizados. Desde aquí se puede acceder a cada análisis individual.
+    \item Un archivo '\textit{nombreDelRepositorioAnalizado}.html' que incluye todo el análisis realizado en el repositorio correspondiente.
+\end{itemize}
+
+Una vez creados podemos visualizarlos levantando un servidor local, aunque esto no es algo incluido en el proceso original, sino que hacerlo por nosotros mismos.
+
+En \textbf{flujo actualizado} ha sido diseñado pensando en la flexibilidad y facilidad para una futura ampliación, añadiendo nuevos procesos y agrupando los ya existentes en archivos encargados de tareas comunes. Así, podemos definir los siguientes pasos en el proceso de ejecución:
+
+\begin{enumerate}
+    \item  Comenzamos ejecutando el archivo 'server.js', el cual crea y levanta un servidor que proporcionará todo el contenido necesario, tanto las páginas web como los resultados de los análisis. 
+    
+    \item El servidor se encarga de cargar la lógica de enrutamiento y la api, las cuales se encuentran cada una en sus respectivos archivos (htmlRoutes.js y apiRoutes.js), además de archivos encargados de los estilos y lógica de cada página web.
+
+    \item El servidor comienza a escuchar, esto es, esperar a recibir solicitudes. En nuestro caso encontramos dos tipos de solicitudes: \textbf{solicitudes de datos} (se piden los resultados de uno o más análisis) y \textbf {solicitudes de páginas} (se pide al servidor el contenido HTML a mostrar en un momento determinado).
+
+    \item El usuario puede ya comenzar a navegar. Al entrar en la dirección proporcionada por el servidor se dirigirá por defecto a la página principal, la cual incluye el resumen de los análisis existentes, incluyendo la información del repositorio GitHub en caso de incluirla.
+
+    \item Al seleccionar uno de los resultados podrá ver toda la información del análisis seleccionado, además de información relevante del repositorio.
+    
+\end{enumerate}
 %Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
 %\LaTeX \ pone las figuras donde mejor cuadran. 
 %Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots 
@@ -785,13 +831,28 @@ Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejem
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
 
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+Como hemos visto a lo largo de la sección de resultados se han cumplido la mayoría de las tareas propuestas inicialmente. 
 
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
+\subsection{Optimización del código existente}
 
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
+\subsection{Implementación de funcionalidad "plug-and-play"}
+
+\subsection{Incorporación de paquete de requisitos y dependencias}
+
+\subsection{Mejora de la visualización de los resultados en formato JSON}
+
+\subsection{Desarrollo de interfaz web}
+
+\subsection{Implementar visualización de resultados por consola}
+
+\subsection{Añadido de registros durante el proceso de análisis}
+
+\subsection{Reestructuración de la arquitectura del código}
+
+\subsection{Ampliación del análisis con información adicional}
+
+
+\emph{shell}:
 
 \begin{verbatim}
   aspell --lang=es_ES -c memoria.tex
@@ -800,32 +861,41 @@ Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde l
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM.
-Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+La realización de este proyecto no habría sido posible de no ser por los conocimientos adquiridos en múltiples asignaturas del Grado de en Ingeniería en Tecnologías de la Telecomunicación. Al tratarse de un proyecto esencialmente de programación, no es de sorprender que las asignaturas que considere más me han aportado sean:
 
-\begin{enumerate}
-  \item a
-  \item b
-\end{enumerate}
+\begin{itemize}
+    \item \textbf{Fundamentos de la programación: } La piedra angular de todo este proyecto. El conocimiento adquirido en esta asignatura, básico mas fundamental, es el que me ha permitido comenzar mi evolución como programador, sin la que no habría sido posible esta tarea.
+
+    \item \textbf{Servicios y Aplicaciones Telemáticas: } Está asignatura me proporcionó por un lado el conocimiento de Python necesario para llevar a cabo este proyecto. Además, la elaboración de un gran proyecto en esta asignatura me hizo aprender a compaginar distintos lenguajes de programación en un mismo trabajo. Aunque no fuese un requisito indispensable de esta asignatura, fue ésta la que me impulsó a aprender en profundidad HTML y CSS, lenguajes que a día de hoy uso de manera extensa en el entorno laboral.
+
+    \item \textbf{Desarrollo de Aplicaciones Telemáticas: } La asignatura que sin lugar a dudas considero que más me ha aportado en toda la carrera. Me permitió aprender JavaScript, uno de los lenguajes más utilizados a nivel mundial, a un ritmo personalizado, lo cual agradecí enormemente. Gracias a esta asignatura, junto con las anteriormente mencionadas, pude realizar mis labores más tarde en las prácticas externas.
+
+    \item \textbf{Prácticas Externas: } El conocimiento adquirido en las asignaturas ya mencionadas me permitió tomar parte en una empresa como desarrollador web. Dejando a un lado el conocimiento adquirido en relación a los lenguajes empleados aquí aprendí sobre todo qué es el trabajo a nivel empresa, con todo lo que eso conlleva.
+    
+\end{itemize}
 
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+Las lecciones aprendidas tras la elaboración de este proyecto son:
 
-\begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
-\end{enumerate}
-
+\begin{itemize}
+    \item Consolidación de conocimientos del framework Express.js, visto en la asignatura 'Desarrollo de Aplicaciones Telemáticas' y Node.js.
+    \item Uso de la herramienta Postman para la realización de pruebas con API.
+    \item Patrones de diseño y sintaxis de Python con los que no estaba familiarizado.
+    \item Estándares de desarrollo web modernos.
+\end{itemize}
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+En el futuro podrían implementarse las siguientes funcionalidades:
 
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+\begin{itemize}
+    \item Edición del sistema de análisis. Permitir al usuario poder añadir o quitar elementos del análisis, así como poder estipular por sí mismo el nivel que cada elemento analizado.
+    \item Funcionalidad completa del proyecto desde la página web, sin depender de ejecutar el proyecto anteriormente desde la consola. Es decir, poder realizar el análisis directamente desde la web.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
