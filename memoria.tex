@@ -31,6 +31,7 @@
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
 \usepackage{tikz}
+\usepackage{array}
 
 % Escribe el título y el nombre del autor / autora para que se use bien
 % en otras partes de la plantilla
@@ -895,6 +896,7 @@ En el futuro podrían implementarse las siguientes funcionalidades:
 \begin{itemize}
     \item Edición del sistema de análisis. Permitir al usuario poder añadir o quitar elementos del análisis, así como poder estipular por sí mismo el nivel que cada elemento analizado.
     \item Funcionalidad completa del proyecto desde la página web, sin depender de ejecutar el proyecto anteriormente desde la consola. Es decir, poder realizar el análisis directamente desde la web.
+    \item Interacciones entre varios archivos de resultados (comparar archivos, unirlos...). 
 \end{itemize}
 
 
@@ -908,9 +910,111 @@ En el futuro podrían implementarse las siguientes funcionalidades:
 \chapter{Manual de usuario}
 \label{app:manual}
 
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
+\textbf{pycefr} es una herramienta diseñada para evaluar el nivel de código Python 3 utilizando como inspiración el Marco Común Europeo de Referencia para las Lenguas (CERFL). Permite analizar repositorios de GitHub y directorios locales para proporcionar información valiosa sobre el nivel del código.
+
+\subsection{Requisitos Previos}
+Antes de comenzar, asegúrate de tener instalado Python 3 y Node.js. Asegúrate también de tener los permisos adecuados para acceder a los directorios que deseas analizar.
+
+Puedes instalar los módulos de Python necesarios utilizando el archivo \texttt{requirements.txt} ejecutando el siguiente comando:
+
+\begin{verbatim}
+pip install -r requirements.txt
+\end{verbatim}
+
+Además, para instalar los módulos de Node.js requeridos, navega a la carpeta \texttt{frontend/} y ejecuta:
+
+\begin{verbatim}
+npm install
+\end{verbatim}
+
+\subsection{Estructura del Proyecto}
+El proyecto incluye los siguientes componentes:
+
+\begin{itemize}
+    \item \textbf{pycefr.py}: El ejecutable principal que realiza el análisis.
+    \item \textbf{backend/}: Carpeta que contiene los archivos que realizan el análisis del código
+    \item \textbf{frontend/}: Carpeta que contiene la interfaz de usuario basada en Node.js para visualizar los resultados.
+    \item \textbf{results/}: Carpeta donde se almacenan los resultados del análisis.
+    \item \textbf{settings.json}: Archivo de configuración para personalizar la herramienta.
+\end{itemize}
+
+\subsection{Cómo Usar pycefr}
+
+\subsubsection{1. Análisis de un Repositorio de GitHub}
+Para analizar un repositorio de GitHub, utiliza el siguiente comando:
+\begin{verbatim}
+python3 pycerfl.py -r <repo_url>
+\end{verbatim}
+Este comando realiza un análisis completo en un repositorio válido de GitHub.
+
+\subsubsection{2. Análisis de un Usuario de GitHub}
+Para obtener información sobre un usuario de GitHub y sus proyectos, usa:
+\begin{verbatim}
+python3 pycerfl.py -u <user_name>
+\end{verbatim}
+El sistema te preguntará cuál de los proyectos públicos del usuario deseas analizar.
+
+\subsubsection{3. Análisis de un Directorio Local}
+Para analizar un directorio local, ejecuta:
+\begin{verbatim}
+python3 pycerfl.py -d <dir_path>
+\end{verbatim}
+Este comando realizará un análisis completo en el directorio especificado.
+
+\subsubsection{4. Listar Archivos de Resultados}
+Para listar los archivos generados en la carpeta \texttt{results/}, puedes usar la opción:
+\begin{verbatim}
+python3 pycerfl.py -l
+\end{verbatim}
+
+\subsection{5. Visualizar resultados por consola}
+Para visualizar un archivo de resultados por consola puedes usar la opción:
+\begin{verbatim}
+python3 pycerfl.py -c <results_file>
+\end{verbatim}
+\subsubsection{6. Visualización de Resultados via web}
+Una vez completado el análisis, se generará un archivo JSON en la carpeta \texttt{results/}. Para visualizar estos resultados, puedes usar Node.js:
+\begin{enumerate}
+    \item Navega a la carpeta \texttt{frontend/} y ejecuta:
+    \begin{verbatim}
+    npm install
+    \end{verbatim}
+    \item Luego, ejecuta el servidor local:
+    \begin{verbatim}
+    node server.js
+    \end{verbatim}
+\end{enumerate}
+Abre tu navegador y dirígete a \texttt{http://localhost:3000} para ver los resultados.
+
+\subsection{Configuración de settings.json}
+El archivo \texttt{settings.json} permite personalizar la configuración de la herramienta:
+\vspace{1em}
+
+\begin{tabular}{|l|p{10cm}|} % Ajusta el ancho de la columna según necesites
+\hline
+\textbf{Ajustes} & \textbf{Descripción} \\
+\hline
+\texttt{ignoreFolders} & Lista de carpetas que serán excluidas del análisis. \\
+\texttt{API-KEY} & Clave API de GitHub para evitar el límite en las llamadas a la API. \\
+\texttt{addLocalSuffix} & Si se establece en \texttt{true}, añade el sufijo \texttt{\_local} a los archivos de resultados. \\
+\texttt{autoDisplayConsole} & Si se establece en \texttt{true}, muestra los resultados por consola tras finalizar el análisis. \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+\subsubsection{Ejemplo de settings.json}
+\begin{verbatim}
+{
+    "ignoreFolders": [
+        "node_modules/",
+        "myenv/",
+        ".git/",
+        "__pycache__/"
+    ],
+    "API-KEY": "customapikey1234",
+    "addLocalSuffix": true
+}
+\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
