@@ -834,30 +834,41 @@ Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejem
 
 Como hemos visto a lo largo de la sección de resultados se han cumplido la mayoría de las tareas propuestas inicialmente. 
 
-\subsection{Optimización del código existente}
+\subsection{Mejora del código existente}
+
+La mejora del código existente forma parte de casi todos los objetivos planteados. Sin embargo, considero que conviene mencionarlo como uno independiente para destacar el trabajo de refractorización del código en aras de simplificar su comprensión y edición. La abundante documentación añadida sirve el mismo propósito: facilitar la futura edición del proyecto.
 
 \subsection{Implementación de funcionalidad "plug-and-play"}
 
-\subsection{Incorporación de paquete de requisitos y dependencias}
+Personalmente éste era uno de los objetivos que primero me plantée y que consideraba prioritario. Me parecía de vital importancia dotar al usuario de la capacidad de ejecutar el programa nada más descargarlo. La inclusión de los archivos 'requisitos.txt' y 'package.json' para gestionar las dependencias del backend y del frontend, respectivamente, permiten a al usuario instalar en un par de segundos todo lo necesario. Esto junto con el cambio de rutas estáticas a rutas relativas en función del entorno de ejecución dan por cumplido este objetivo.
 
 \subsection{Mejora de la visualización de los resultados en formato JSON}
 
+Originalmente se generaban múltiples archivos que contenían a menudo la misma información pero de maneras distintas. Sin tener en cuenta todavía el uso de varios formatos, esto provocaba que incluso tras generar archivos de resultados había que crear nuevos archivos 'definitivos' de nuevo a partir de éstos. Se ha reducido a un solo archivo por análisis, facilitando al usuario el manejo de la información.
+
 \subsection{Desarrollo de interfaz web}
+
+El objetivo principal del proyecto era dotar al usuario de una mejor interfaz web para visualizar los datos. La original, aunque ténicamente funcional, era incómodo de usar para los estándares de hoy en día.
+
+La implementación de una interfaz web navegable de manera cómoda y con la capacidad de ser expandida en el futuro, pues se ha diseñado de tal modo que esto resulte una tarea poco complicada, da por cumplido este objetivo.
 
 \subsection{Implementar visualización de resultados por consola}
 
+Además de la visualización web un objetivo importante era otorgar al usuario la capacidad de comprobar los resultados por consola, más rápido y ágil que la solución web. Se ha añadido esta vista en formato tabla, la cual considero más que intuitiva teniendo en cuenta el formato de información que estamos tratanto, y se ha incluido en un archivo de ajustes la capacidad de activar o desactivar el mostrado automático de los datos tras finalizar el análisis. Del mismo modo, el usuario puede ejecutar el programa de tal manera que en lugar de realizar el análisis simplemente imprima por la consola en el mismo formato resultados ya existentes. 
+
 \subsection{Añadido de registros durante el proceso de análisis}
+
+Aunque en el proyecto original había comentarios que explicaban qué tarea de estaba realizando, considero que los nuevos dan a entender al usuario de mejor manera qué está pasando en todo momento. Sin embargo, probablemente la mayor mejora se dé en los mensajes de error, antes ausentes, que ahora permiten al usuario saber qué está fallando exactamente, indicando incluso en caso de que el usuario pueda solventarlo la manera de hacerlo.
 
 \subsection{Reestructuración de la arquitectura del código}
 
+Al abordar el proyecto por primera vez el principal problema que tuve fue entender qué realizaba o cómo funcionaba exactamente. Ya no sólo por los problemas de ejecución iniciales, los cuales de acabaron resolviendo en un tiempo razonable, sino por la propia estructura del proyecto. Éste, debido a la relativa pequeña cantidad de archivos que contenía, no constaba de una estructura práctica ni mucho menos escalable.
+
+Se han agrupado los archivos en carpetas que contienen lógica relacionada, facilitando así la organización y el acceso a los componentes del proyecto, intentando seguir los estándares modernos.
+
 \subsection{Ampliación del análisis con información adicional}
 
-
-\emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
+Desde un inicio se ha pretendido expandir el análisis de dos maneras. La primera de ellas, incluyendo la información relativa a GitHub, esto es, información de los usuarios involucrados, del propio repositorio... La segunda parte consistía en rehacer el proceso completo de análisis, de modo que los elementos presentes en el código se contasen de una manera diferente para facilitar, de nuevo, su futura edición o personalización (se consideró otorgar al usuario la capacidad de activar y desactivar los elementos del código que analizar). Mientras que la primera tarea se cumplió sin mayor problema, al abordar este rediseño del análisis de archivos, me di cuenta de que era necesario reconstruir el proceso casi desde los cimientos. Tras reevaluar la magnitud de esta tarea consideré que el esfuerzo no justificaba la teórica diferencia de resultados, lo que llevó a replantear la viabilidad de este enfoque, finalmente optando por desecharlo. Dicho esto, se han realizado mejoras en los textos de los resultados.
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
