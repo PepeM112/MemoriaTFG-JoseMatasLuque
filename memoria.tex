@@ -726,14 +726,14 @@ En la siguiente comparativa se puede observar el cambio significativo en la estr
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{img/tree_frontend_original.png}
     \caption{Estructura original del frontend}
-    \label{fig:original_structure}
+    \label{fig:tree_frontend_original}
   \end{minipage}
   \hspace{0.1\textwidth}
   \begin{minipage}[t]{0.35\textwidth}
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{img/tree_frontend_final.png}
     \caption{Nueva estructura del frontend tras el rediseño}
-    \label{fig:new_structure}
+    \label{fig:tree_frontend_final}
   \end{minipage}
 \end{figure}
 
@@ -743,13 +743,13 @@ Toda esta reestructuración implica naturalmente un cambio absoluto en el funcio
     \centering
     \includegraphics[height=19cm, keepaspectratio]{img/esquema_frontend_original.jpg}
     \caption{Flujo del frontend original}
-    \label{fig:new_structure}
+    \label{fig:flux_frontend_original}
 \end{figure}
 \begin{figure} [H]
     \centering
     \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{img/esquema_frontend_final.jpg}
     \caption{Flujo del frontend rediseñado}
-    \label{fig:new_structure}
+    \label{fig:flux_frontend_final}
 \end{figure}
 
 En el \textbf{flujo original} ejecutamos casi exclusivamente el archivo 'main.js', el cual realiza todo el trabajo. Éste busca en el sistema archivos de resultados JSON y extrae de ellos la información relevante a mostrar. Tras esto carga unas plantillas para crear dos archivos HTML:
