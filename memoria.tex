@@ -726,14 +726,14 @@ En la siguiente comparativa se puede observar el cambio significativo en la estr
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{img/tree_frontend_original.png}
     \caption{Estructura original del frontend}
-    \label{fig:tree_frontend_original}
+    \label{fig:original_structure}
   \end{minipage}
   \hspace{0.1\textwidth}
   \begin{minipage}[t]{0.35\textwidth}
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{img/tree_frontend_final.png}
     \caption{Nueva estructura del frontend tras el rediseño}
-    \label{fig:tree_frontend_final}
+    \label{fig:new_structure}
   \end{minipage}
 \end{figure}
 
@@ -743,13 +743,13 @@ Toda esta reestructuración implica naturalmente un cambio absoluto en el funcio
     \centering
     \includegraphics[height=19cm, keepaspectratio]{img/esquema_frontend_original.jpg}
     \caption{Flujo del frontend original}
-    \label{fig:flux_frontend_original}
+    \label{fig:new_structure}
 \end{figure}
 \begin{figure} [H]
     \centering
     \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{img/esquema_frontend_final.jpg}
     \caption{Flujo del frontend rediseñado}
-    \label{fig:flux_frontend_final}
+    \label{fig:new_structure}
 \end{figure}
 
 En el \textbf{flujo original} ejecutamos casi exclusivamente el archivo 'main.js', el cual realiza todo el trabajo. Éste busca en el sistema archivos de resultados JSON y extrae de ellos la información relevante a mostrar. Tras esto carga unas plantillas para crear dos archivos HTML:
@@ -814,10 +814,146 @@ Incluye también los resultados de validación que permiten afirmar que tus resu
 \chapter{Resultados}
 \label{chap:resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+En este capítulo procederemos a ver ejemplos de uso de la aplicación. Para ello hemos tomado el repositorio \href{https://github.com/wohlert/semi-supervised-pytorch}{semi-supervised-pytorch}. Se trata de un repositorio público de Github de un tamaño entre pequeño y moderado con el que se han ido realizando numerosas pruebas a lo largo del desarrollo del proyecto.
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+\section{Backend}
 
+El backend consiste esencialmente en la ejecución del archivo \texttt{pycefr.py}. Éste consta de 5 posibles métodos de ejecución, los cuales podemos obtener rápidamente añadiendo el argumento -h o --help:
+
+\vspace{2em}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{img/results/backend_exe_h.png}
+    \caption{Ejemplo de uso de argumento help}
+    \label{fig:analysis_help}
+\end{figure}
+
+Entendido esto, procederemos a explicar cada una de las opciones:
+
+\subsection{Repositorio (-r)}
+
+Utilizamos las opciones \texttt{-r <REPO\_URL>} para realizar un análisis de un repositorio remoto alojado en Github. El resultado de este proceso debería mostrar algo tal que:
+
+\vspace{1em}
+
+\begin{figure}[hb]
+    \centering
+    \includegraphics[height=17.25cm, keepaspectratio]{img/results/backend_exe_r.png}
+    \caption{Análisis completo de repositorio}
+    \label{fig:analysis_repo}
+\end{figure}
+
+\subsection{Usuario (-u)}
+
+Las opciones \texttt{-u <USER>} nos permite analizar un repositorio dado un nombre de usuario de GitHub. Utilizando el mismo repositorio de ejemplo obtenemos:
+
+\begin{figure}[hb]
+    \centering
+    \includegraphics[height=17.25cm, keepaspectratio]{img/results/backend_exe_u.png}
+    \caption{Análisis de repositorio dado el usuario}
+    \label{fig:analysis_user}
+\end{figure}
+
+\subsection{Directorio (-d)}
+
+El caso \texttt{-d <DIR>} realiza un análisis de un repositorio local, dada la ruta del mismo. En este caso hemos clonado antes el repositorio que estamos empleando para las pruebas en la carpeta "tmp/", cuya finalidad es albergar archivos temporales cuya eliminación no altera la ejecución del programa.
+
+\vspace{1em}
+\begin{figure}[hb]
+    \centering
+    \includegraphics[height=17cm, keepaspectratio]{img/results/backend_exe_d.png}
+    \caption{Análisis de directorio local}
+    \label{fig:analysis_dir}
+\end{figure}
+
+Al tratarse de un directorio local es de esperar que no se incluya la información relativa al repositorio (puesto que no es un repositorio). Sin embargo, dado lo común que es trabajar con repositorios integrados en GitHub la aplicación comprueba si es el caso del directorio en cuestión. En caso de serlo, pregunta al usuario si prefiere analizar el repositorio remoto. Esto puede resultar ventajoso en caso de estar interesado en realizar un análisis con los cambios más recientes. 
+
+Si el usuario responde de manera afirmativa se procede a realizar el análisis del repositorio, ignorando los archivos locales. En caso negativo, se analiza el directorio indicado anteriormente. El archivo resultante se generará añadiendo el sufijo "\_local" al nombre del mismo. Esto da al usuario la oportunidad de realizar ambos análisis (local y del repositorio remoto) y no sobreescribir el archivo resultante (se toma el nombre del directorio o repositorio). Este comportamiento se puede activar o desactivar en el archivo de ajustes \texttt{settings.txt}, estableciendo en \textit{false} la opción \textit{addLocalSuffic}.
+
+\subsection{List (-l)}
+
+La opción \texttt{-l} permite al usuario obtener el listado de los resultados existentes. Se nombran los archivos creados como consecuencia de los análisis realizados.
+
+\begin{figure}[hb]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{img/results/backend_exe_l.png}
+    \caption{Listado de archivos de resultados}
+    \label{fig:analysis_list}
+\end{figure}
+
+\subsection{Consola (-c)}
+
+La última de las opciones disponibles, \texttt{-c <CONSOLE>} permite mostrar por consola resultados ya existentes, con el fin de evitar que tener que realizar de nuevo el análisis completo.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{img/results/backend_exe_c.png}
+    \caption{Mostrar resultados por consola}
+    \label{fig:analysis_console}
+\end{figure}
+\clearpage
+
+\subsection{Apuntes}
+Es de especial relevancia mencionar el archivo de ajustes \texttt{settings.json}. Aunque ya hemos tratado algunas de las opciones disponibles falta mencionar la que probablemente sea la más importante de todas ellas.
+
+A menudo los proyectos requieren de numerosos módulos y dependencias para su correcta ejecución. Éstos deben naturalmente estar instalados a la hora de ejecutar el proyecto, de lo contrario se producirían errores de ejecución. Por ejemplo, en este proyecto se está utilizando Python, y en este caso se requeren, entre otros, los módulos requests (utilizado para realizar solicitudes HTTP) o tabulate (para dar formato a los datos al mostrarlos por pantalla). Podríamos instalarlos en nuestra máquina, añadiéndolos a la versión de Python de ésta. Sin embargo, esto puede resultar problemático en caso de trabajar en varios proyectos que utilicen versiones distintas de un mismo módulo o dependencia.
+
+La solución más ágil y común a este problema es la creación de un entorno virtual. Un entorno virtual es una herramienta que permite crear un espacio aislado en el que se pueden instalar y gestionar dependencias de proyectos sin interferir con otras instalaciones o proyectos en el mismo sistema. En nuestro caso hemos creado el entorno "myenv" para ello. Al crearse obtenemos un lienzo en blanco de Python al que añadir dependencias, lo cual hacemos mediante el uso del archivo \texttt{requirements.txt}. Esto nos sirve para el backend, escrito en Python; para el frontend, escrito en JavaScript, utilizamos una herramienta equivalente, llamada "npm".
+
+En conclusión, estas carpetas de dependencias se almacenan dentro del proyecto y a menudo constan de un número muy elevado de archivos. Puesto que nuestro programa se dedica a analizar archivos, no nos conviene que se "entretenga" analizando estos numerosos (a veces incluso cientos), archivos. Es por ello en el archivo de ajustes hemos incluido una opción \textit{"ignoreFolders"}, en el que podemos incluir las carpetas que queremos excluir del análisis:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{img/results/ignore_folders.png}
+    \caption{Ejemplo de uso de opción "ignoreFolders"}
+    \label{fig:ignore_folders}
+\end{figure}
+
+\clearpage
+\section{Frontend}
+
+Una vez visto el proceso para la creación del análisis podemos mostrar su visualización via web. Para ello nos posicionamos en la carpeta \texttt{frontend/} y levantamos el servidor ejecutando:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{img/results/frontend_exe_console.png}
+    \caption{Inicialización de servidor}
+    \label{fig:frontend_console}
+\end{figure}
+
+Con esto el servidor está preparado para recibir solicitudes. Por defecto se inicializará en el puerto 3000. Si vamos a esa direccón encontramos la página principal, la cual nos muestra un resumen de los análisis realizados:
+
+\vspace{1em}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{img/results/frontend_exe_home.png}
+    \caption{Vista web: Home}
+    \label{fig:frontend_home}
+\end{figure}
+
+En este caso aparecen dos resultados, referentes a los dos análisis que hemos realizado. Aquí no podemos ver más que un breve resumen, para dar al usuario una pequeña idea del repositorio o directorio analizado. En caso de tratarse de un repositorio este resumen mostrará algunos datos relevantes sobre el mismo.
+
+Al hacer click en el botón "Ver más" nos dirigimos a la página del propio análisis. En este caso seleccionaremos el primero de ellos.
+
+Diferenciamos en esta página dos bloques:
+
+\begin{itemize}
+    \item \textbf{Información general: } Como su propio nombre indica muestra información general del proyecto. Entre estos datos se encuentran el nombre del proyecto, su fecha de creación, el número de commits realizados, una estimación del número de horas empleadas en el proyecto y el número total de archivos y líneas modificados en la historia del proyecto.
+
+    \item \textbf{Propiedades: } En esta tabla vemos finalmente el resultado del análisis. Dado el tipo de información he encontrado más conveniente representarlo en formato tabla. Para mejorar la experiencia del usuario, se ha añadido la capacidad de ordenar la tabla por cada columna, en orden ascendente o descendente.
+\end{itemize}
+
+Conviene mencionar que en el caso de seleccionar un directorio local no se muestra el primer bloque, de \textbf{información general}, puesto que no hay manera de mostrar, entre otros, el tiempo empleado en su edición o el número de archivos editados. Es por ello que he considerado mejor opción excluirlo antes que dedicar únicamente este bloque a mostrar el nombre del proyecto. Dicho esto, en línea con la política general del proyecto, se han creado estructuras y páginas de estilos pensando ya en futuros cambios o ampliaciones, en caso de querer mostrar más datos o incluso más bloques.
+
+Por último, en todas las páginas (incluida la home) encontramos en la parte izquierda un menu para navegar por la web. Este menú se puede ocultar o mostrar haciendo click en el botón "burguer" en la esquina superior derecha, y de momento tiene un único enlace navegable para redirigirse a la home. Dada la funcionalidad actual del proyecto no he visto necesario añadir más opciones, pero me parece conveniente dejar hecho el propio menú, de modo que de ser necesario simplemente haya que añadir enlaces sin preocuparse del comportamiento del menú.
+
+\vspace{1em}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=\textheight, keepaspectratio]{img/results/frontend_exe_repo.png}
+    \caption{Vista web: Repositorio}
+    \label{fig:frontend_home}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
