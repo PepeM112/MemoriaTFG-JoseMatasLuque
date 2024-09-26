@@ -775,6 +775,7 @@ En \textbf{flujo actualizado} ha sido diseñado pensando en la flexibilidad y fa
     \item Al seleccionar uno de los resultados podrá ver toda la información del análisis seleccionado, además de información relevante del repositorio.
     
 \end{enumerate}
+
 %Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
 %\LaTeX \ pone las figuras donde mejor cuadran. 
 %Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots 
@@ -797,13 +798,43 @@ En \textbf{flujo actualizado} ha sido diseñado pensando en la flexibilidad y fa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
-\chapter{Experimentos y validación}
+\chapter{Validación y pruebas}
 \label{chap:experimentos}
 
-Este capítulo se introdujo como requisito en 2019. 
-Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
-Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
+% Este capítulo se introdujo como requisito en 2019. 
+% Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
+% Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
 
+Puesto que el proyecto consiste esencialmente en extender y mejorar toda la funcionalidad que rodea el análisis de un archivo individual (no se han realizado grandes cambios en esta parte) no se ha hecho énfasis en pruebas relativas a esto. Se entiende que ello forma pertenece al proyecto original.
+
+De este modo, la validación del código añadido o editado se ha ido realizando en la mayor parte de los casos durante la propia codificación. A menudo se han ido probando los cambios a medida que se implementaban en la medida de lo posible. Naturalmente, en la mayoría de ocasiones estas pruebas se hacían por bloques, y no ha sido hasta la fase final del desarrollo (último mes, mes y medio) que se comenzaron a hacer pruebas del proceso completo. Esto se debe a que desde el principio se ha tenido una idea de producto final que presentaba muchas incompatibilidades (en cuanto a código se refiere) con el producto original, y resulta inconveniente, además de una más que ineficiente inversión del tiempo de desarrollo, asegurar la compatibilidad completa de las partes en todo momento.
+
+Como ya ha sido mencionado el comienzo del desarrollo consistió en la creación de una versión estable, puesto que en un principio nos encontramos con múltiples errores de ejecución. Se decidió también, de cara a facilitar la compresión del código, refractorizar gran parte de éste. Esta versión estable se tomó tras realizar los cambios justos y necesarios para solucionar aquellos procesos que producían los errores, y para poder acceder en el futuro rápidamente a ella (para poder comprobar en todo momento el funcionamiento original) se añadió con Git una rama local bajo del nombre "original-fixed" a partir del commit en que se subieron esos últimos cambios. Esto estableció el primer 'ancla' en el proyecto, proporcionándome un punto de referencia al que poder regresar si más adelante me encontrara con errores críticos difíciles de rastrear, además de permitirme realizar las primeras pruebas, aunque fuera del código original.
+
+Tras esto los cambios se fueron probando poco a poco, a medida que se desarrollaban. Sin embargo, al introducir los cambios que incorporaban llamadas a la API de GitHub se me presentó la necesidad de probar dichas llamadas de algún modo. Ejecutar el análisis era una opción poco eficiente, dado que se perdería mucho tiempo ejecutando código cuando sólo estamos interesados en la llamada. En ocasiones muy concretas utilicé la herramienta "curl" desde la terminal, que me permite realizar solicitudes HTTP, pero resultaba incómoda cuando se trataba se llamadas complejas. Es por ello que opté por usar \textbf{Postman}.
+
+Postman me proporcionó una interfaz para desarrollar y probar APIs. Creé una nueva colección que contendría todas las llamadas que se realizan en el proyecto. Además, me permite añadir fácilmente datos que quiera añadir a la solicitud, así como ejemplos de ejecución de dichas llamadas.
+
+\vspace{1em}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/postman.png}
+    \caption{Interfaz de la herramienta Postman}
+    \label{fig:postman}
+\end{figure}
+
+En la figura 5.1 podemos ver la interfaz de Postman. En el lado izquierdo encontramos un árbol de la colección de llamadas utilizadas en el proyecto. Con esto podemos simplemente seleccionar la llamada que necesitamos, editarla con la información necesaria (bloque superior), hacerla y visualizar la respuesta (bloque inferior). Esto permitió obtener las respuestas a cualquier llamada de manera rápida y clara. Además, el formato empleado para las respuestas a las solicitudes es JSON, el cuual, como ya hemos visto, permite una fácil manipulación de los datos.
+
+En nuestro caso gran parte de las llamadas son a la API de GitHub, quien implementa medidas de seguridad que limitan las solicitudes desde una misma dirección IP si se detecta un número excesivo en un corto período de tiempo. Esto lo hace con el fin para prevenir abusos y proteger la plataforma de posibles ataques automatizados. Es por ello que se incluyó la opcion de incluir un token en el archivo de ajustes. En caso de que el usuario exceda el límite de solicitudes se le presentará un mensaje de error indicando qué debe hacer para solventar este problema: 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/results/backend_exe_r_api_error.png}
+\end{figure}
+
+En un principio se incluyeron únicamente las llamadas que ahora se encuentran bajo la carpeta \textit{Backend}, pero en al retomar el desarrollo de la parte web surgió la necesidad de añadir las solicitudes realizadas aquí también. En este caso las llamadas son a nuestro propio servidor local que levantamos para mantener la página web, y devuelve tanto los datos de los análisis en formato JSON como el HTML necesario para el renderizado de cada página.
+
+Las pruebas finales consistieron en comprobar la correcta visualización de la parte web, lo cual consiste principalmente en levantar el servidor y navegar por las páginas, y finalmente comprobar el proceso completo, realizando primero un análisis y arrancando luego el servidor para comprobar que los datos se muestran en la web.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
