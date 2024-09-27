@@ -85,8 +85,7 @@ Ingeniería en Tecnologías de la Telecomunicación
 
 \large
 Autor : \theauthor \\
-Tutor : Dr. Gregorio Robles\\
-Cotutor: (si procede)
+Tutor : Dr. Gregorio Robles Martínez\\
 \vspace{1cm}
 
 \large
@@ -119,7 +118,7 @@ Curso académico 2024/2025
 \vspace{0.8cm}
 \large
 \textbf{Autor :} \theauthor \\
-\textbf{Tutor :} Dr. Nombre del Profesor/a
+\textbf{Tutor :} Dr. Gregorio Robles Martínez
 
 \end{center}
 
@@ -187,17 +186,9 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
+El objetivo principal de este proyecto es rediseñar y extender la funcionalidad de la ya existente aplicación "pycefrl", con el fin de hacerla más accesible y cómo al usuario. Esta herramienta tiene como labor realizar análisis de código en el lenguaje Python para obtener un nivel de complejidad ajustado a los niveles CEFRL (Common European Framework of Reference for Languages), el cual se ha convertido en un estándar en Europa.
 
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
-
-Lo mejor es escribir el resumen al final.
+El desarrollo de este proyecto ha involucrado numerosas tecnologías, siendo las principales los lenguajes de programación Python en lo referente al análisis del código y JavaScript para la visualización web de los resultados, junto con HTML y CSS. Han sido de vital importancia también el formato de datos JSON para la manipulación de la información y por supuesto GitHub para alojar tanto el código trabajado como el código a analizar.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -206,10 +197,9 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+The primary objective of this project is the redesign and extend de functionality of the existing "pycefrl" applicaction, with the aim of making it more accessible and user-friendly. This tool performas code analysis in the Python programming language to determine a complexity level aligned with the CEFRL (Common European Framework of Reference for Languages), which has become a standard in Europe.
 
+The development of this project has involved numerous technologies, with the primary ones being Python for code analysis and JavaScript for web-based visualizatio n of the results, along with HTML and CSS. The JSON data format has also been crucial for information manipulation, along with of course GitHub, which has been used to host both the worked-on code and the code to be analyzed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -253,115 +243,33 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 % En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
 
 
-\section{Sección}
-\label{sec:seccion}
+El Marco Común Europeo de Referencia para las Lenguas (CEFR) es el estándar ampliamente aceptado en Europa y otras regiones para evaluar las competencias lingüísticas de un usuario. En este marco las habilidades son clasificadas utilizando una escala de seis niveles, yendo desde A1 (básico) hasta C2 (maestría), permitiendo obtener una referencia clara sobre el progreso de los estudiantes en el dominio de un idioma. Este estándar ha sido popularizado no sólo en entornos educativos, sino también en el entorno laboral, donde a menudo resulta crucial contrar con competencias de idiomas.
 
-Esto es una sección, que es una estructura menor que un capítulo. 
+Partiendo de esto, el proyecto original que se sirve de base para este trabajo buscaba aplicar este sistema de evaluación al popular lenguaje de programación Python. El objetivo era analizar  distintas construcciones o patrones de código, asignándoles un nivel CEFR de acorde a los elementos encontrados. Esto ofrecía una forma ágil de medir el nivel de competencia de un programador, brindando una herramienta útil para educadores o desarrolladores.
 
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
+Mi contribución a este proyecto ha consistido en una extensión y rediseño del mismo que amplía su funcionalidad y mejora significativamente la experiencia de usuario. Mientras que el análisis de archivos Python dentro de un repositorio sigue siendo una parte clave de la herramienta, se han introducido mejoras que optimizan de manera notable su uso. Entre estas mejoras destacan una interfaz web más intuitiva, una visualización clara de los resultados a través de la consola y la inclusión de opciones configurables que permiten personalizar ciertos aspectos del proceso. Estas adiciones hacen que la herramienta sea sobre todo más accesible y flexible, adaptándose mejor a distintos entornos educativos y profesionales.
 
-\section{Estilo}
-\label{subsec:estilo}
+Además, las modificaciones implementadas en esta versión no sólo han mejorado la funcionalidad actual, sino que también han facilitado futuras ampliaciones del proyecto. De este modo, la herramienta queda preparada para incorporar nuevas características o adaptaciones sin grandes esfuerzos de reestructuración.
 
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}. 
-Observarás que el texto dentro de la referencia es el identificador de la figura (que se corresponden con el ``label'' dentro de la misma). 
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
-
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
-
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
-
-
+Con estas mejoras mi trabajo ofrece una visión renovada del proyetco original, manteniendo su esencia de análisis detallado y preciso, pero con una usabilidad y experiencia de usuario muy superior. La herramienta se convierte así en una solución más completa para aquellos usuarios que busquen evaluar y entender el nivel de comptenteica en Python de manera estructurada y eficiente.
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
-  \label{fig:arquitectura}
-\end{figure}
-
-
-
-
-En esta sección se debería introducir la estructura de la memoria. 
-
-Así:
-
+La memoria de este trabajo está estructurada de la siguiente manera:
 
 \begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
-  
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
-  
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
-  
-  \item \ldots
+    \item \textbf{Capítulo 1: Introducción.} Explicación del contexto del proyecto realizado y uuna brevemente introducción a los objetivos del mismo.
+    \item \textbf{Capítulo 2: Objetivos.} Explicación del objetivo general del proyecto, así como el listado de los objetivos más específicos y la planificación seguida durante el desarrollo.
+    \item \textbf{Capítulo 3: Estado del arte.} Explicación de las tecnologías y herramientas involucradas en el proyecto.
+    \item \textbf{Capítulo 4: Diseño e implementación.} Explicación detallada del proceso de desarrollo del proyecto.
+    \item \textbf{Capítulo 5: Validación y pruebas.} Explicación de las pruebas realizadas durante el desarrollo para validar los resultados obtenidos.
+    \item \textbf{Capítulo 6: Resultados.} Explicación y muestra del estado final de la aplicación, incluyendo ejemplos de uso.
+    \item \textbf{Capítulo 7: Conclusiones.} Reflexión sobre el estado final del proyecto, analizando el cumplimiento de los objetivos propuestos y planteando posibles futuras extensiones.
+    \item \textbf{Capítulo 8: Manual de usuario.} Explicación de uso del proyecto, más concisa que la realizada en Resultados.
+    
 \end{itemize}
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -415,7 +323,7 @@ El tiempo total asignado para el desarrollo del trabajo fue de seis meses. Duran
 
 Dado que el proyecto se basa en la extensión de una aplicación preexistente, la primera fase consistió en comprender la estructura y funcionalidad del código ya implementado. Este proceso requirió más tiempo del estimado inicialmente, debido a la cantidad de errores, la falta de organización y la ausencia de documentación adecuada en el código existente.
 
-Concluida esta fase de análisis, la primera tarea fue implementar la funcionalidad "plug-and-play". Sin embargo, este proceso se prolongó más de lo previsto debido a las dificultades para comprender el comportamiento del sistema durante la ejecución, ya que inicialmente presentaba fallos importantes que impedían su correcto funcionamiento.
+Concluida esta fase de análisis, la primera tarea fue implementar la funcionalidad "plug-and-play". Sin embargo, este proceso se prolongó más de lo previsto debido a las dificultades para comprender el comportamiento del sistema durante la ejecución, entre otros motivos porque inicialmente presentaba fallos críticos que impedían su correcto funcionamiento.
 
 Al finalizar el segundo mes de desarrollo, y tras haber establecido una base mínima operativa, pude realizar las primeras pruebas de ejecución, verificando los procesos a medida que los desarrollaba. Durante el tercer mes, me enfoqué en reescribir el código, eliminando una considerable cantidad de elementos redundantes, ineficientes e incluso obsoletos, garantizando además que tanto el código como la documentación cumplieran con los estándares de la industria.
 
@@ -480,16 +388,16 @@ El sexto y último mes estuvo dedicado principalmente a la redacción de la memo
 % También existe la posibilidad de poner notas al pie de página, por ejemplo, una para indicarte que visite la página del GSyC\footnote{\url{http://gsyc.es}}.
 
 \section{Python}
-Python es un lenguaje de programación de alto nivel ampliamente utilizado en el desarrollo de software. Es un lenguaje referente para tareas relacionadas con el análisis de datos y el auge de la IA ha aumentado aún más su popularidad. Su enfoque en la simplicidad y legibilidad del código, añadida a su gran polivalencia, lo convierte en una excelente opción para desarrolladores de todos los niveles.
+Python es un lenguaje de programación de alto nivel ampliamente utilizado en el desarrollo de software. Es un lenguaje referente para tareas relacionadas con el análisis de datos y el reciente auge de la IA ha aumentado todavía más su popularidad. La simplicidad y legibilidad del código, añadida a su gran polivalencia, lo convierte en una excelente opción para desarrolladores de cualquier nivel.
 
-Python es un lenguaje interpretado y de tipado dinámico, mas una de sus mayores virtudes es la presencia de una amplia biblioteca estándar y un ecosistema de paquetes más que robusto, el cual ofrece herramientas para prácticametne cualquier necesidad, desde desarrollo web hasta inteligencia artificial.
+Una de sus mayores virtudes es la presencia de una amplia biblioteca estándar y un ecosistema de paquetes más que robusto, el cual ofrece herramientas para prácticamente cualquier necesidad, desde desarrollo web hasta inteligencia artificial, doctrina muy popularizada hoy en día.
 
-En el contexto de este proyecto Python ha sido utilizado como lenguaje principal para desarrollar la lógica del análisis, aprovechando su capacidad para manejar estructuras complejas de datos, así como su compatibilidad con bibliotecas de análisis, las cuales han sido cruciales para la tarea. La flexibilida del lenguaje ha permitido una rápida iteración y mejora del código, facilitanto también la integración con otras tecnologías.
+En el contexto de este proyecto Python ha sido utilizado como lenguaje principal para desarrollar la lógica del análisis, aprovechando su capacidad para manejar estructuras complejas de datos, así como su compatibilidad con bibliotecas de análisis, las cuales han sido cruciales para la tarea. La flexibilida del lenguaje ha permitido una rápida iteración y mejora del código, facilitando también la integración con otras tecnologías.
 
 \section{HTML}
-HTML (HyperText Markup Language) es el lenguaje estándar para la creación y estructuración de documentos en la web. Define la estructura básica de las páginas web mediante el uso de etiquetas y atributos que organizan el contenido en elementos como encabezados, párrafos, listas, enlaces y multimedia. HTML proporciona la base sobre la cual se construyen las páginas web, permitiendo a los nevegadores interpretar y mostrar el contenido de manera coherente y estructurada.
+HTML (HyperText Markup Language) es el lenguaje estándar para la creación y estructuración de documentos en la web. Define la estructura básica de las páginas web mediante el uso de etiquetas y atributos que organizan el contenido en elementos como encabezados, párrafos, listas, enlaces y multimedia. HTML proporciona el esqueleto de las páginas web, permitiendo a los navegadores interpretar y mostrar el contenido de manera coherente y estructurada.
 
-En concreto, se utilizó HTML5, la versión más reciente del lenguaje, que introduce mejoras significativas con respecto a sus predecesores. HTML5 incluye nuevas etiquetas semánticas que mejoran la estructura del documento y la accesibilidad como \texttt{header}, \texttt{footer}, \texttt{article} y \texttt{section}. Estas etiquetas no sólo proporcional una estructura más clara y lógica para los documentos, sino que también facilitan la optimización para motores de búsqueda (SEO) y la integración con tecnlogías modernas. Además, HTML5 soporta de manera nativa elementos multimedia como <video> y <audio>, eliminando la hasta ahora necesaria incorporación de plugins adicionales y permitiendo una experiencia de usuario más rica y fluida.
+En concreto, se utilizó HTML5, la versión más reciente del lenguaje, que introduce mejoras significativas con respecto a sus predecesores. HTML5 incluye nuevas etiquetas semánticas que mejoran la estructura del documento y la accesibilidad como \texttt{header}, \texttt{footer}, \texttt{article} y \texttt{section}. Estas etiquetas no sólo proporcional una estructura más clara y lógica para los documentos, sino que también facilitan la optimización para motores de búsqueda (SEO) y la integración con tecnlogías modernas. Además, HTML5 soporta de manera nativa elementos multimedia como \texttt{video} y \texttt{audio}, eliminando la hasta ahora necesaria incorporación de plugins adicionales y permitiendo una experiencia de usuario más rica y fluida.
 
 En este proyecto HTML ha sido utilizado para construir y organizar la interfaz web, a fin de ofrecer una presentación moderna y funcional de los resultados del análisis.
 
@@ -499,30 +407,38 @@ CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presenta
 En este proyecto CSS ha sido empleado para mejorar la apariencia de la interfaz web, garantizando qeu los resultados visualizados fueran estéticamente atracticos y fáciles de interpretar. Además, CSS ha permitido personalizar el diseño para asegurar que la interfaz fuera todalmente responsiva, adptándose a dispotivos móviles y de escritorio sin pérdida de funcionalidad o usabilidad.
 
 \section{JavaScript}
-JavaScript es un lenguaje de programación orientado a eventos, utilizado principalmente para el desarrollo de la lógica en el lado del cliente en aplicaciones web, aunque no se limita únicamente a ese uso. Su capacidad para interactuar dinámicamente con el DOM (Document Object Model) lo convierte en el motor que ha impulsado durante décadas la interactividad de las páginas web modernas. A lo largo de los años, JavaScript ha evolucionado con frameworks y librerías que amplían sus funcionalidades y permiten el desarrollo de aplicaciones complejas tanto en el cliente como en el servidor.
+JavaScript es uno de los lenguajes de programación más extendidos a día de hoy. Es utilizado principalmente para el desarrollo de aplicaciones web, aunque no se limita únicamente a ese uso. En ámbito suele ir acompañado de HTML y CSS, donde HTML conforma el esqueleto de la página, CSS la define la apariencia y JavaScript la lógica de los elementos. 
 
-En este proyecto, JavaScript se ha utilizado para diversos propósitos, incluyendo la implementación de funcionalidades en el servidor y en el cliente.
+Durante décadas JavaScript ha impulsado la interactividad de las páginas web modernas y lo largo de los años ha ido evolucionado con frameworks y librerías que amplían sus funcionalidades y simplifican gran parte de los procesos, facilitando el desarrollo de aplicaciones complejas tanto en el lado del cliente como en el servidor.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{img/prog_languages_popularity.png}
+    \caption{Lenguajes de programación más usados en 2023}
+    \label{fig:prog-languages}
+\end{figure}
+En este proyecto, JavaScript se ha utilizado para diversos propósitos:
 
 \begin{enumerate}
     \item \textbf{En el servidor:}
     \begin{itemize}
-        \item \textbf{Manejo de rutas y archivos:} Se utiliza el framework Express.js para controlar el manejo de rutas y la creación de un servidor web. Express facilita la configuración de middleware para procesar solicitudes HTTP y servir archivos estáticos. En el código proporcionado, Express se usa para definir rutas que manejan solicitudes tanto para la API como para la entrega de archivos HTML y recursos estáticos, como imágenes, CSS y JavaScript.
-        \item \textbf{Manejo de archivos:} Se utilizan módulos nativos de Node.js para leer y escribir archivos. En el código se leen archivos JSON y HTML y se ayuda a resolver rutas de archivos y directorios, asegurando la correcta ubicación de los archivos en el sistema de archivos.
+        \item \textbf{Manejo de rutas y archivos:} Se ha utilizado el framework Express.js para controlar el manejo de rutas y la creación de un servidor web. Express facilita la configuración del middleware para procesar solicitudes HTTP y servir archivos estáticos. En el código proporcionado Express se usa para definir rutas que manejan solicitudes tanto para la API como para la entrega de archivos HTML y recursos estáticos, como imágenes, CSS y JavaScript.
+        \item \textbf{Manejo de archivos:} Se utilizan módulos nativos de Node.js para leer y escribir archivos. En el código se leen archivos JSON y HTML y se ayuda a resolver rutas de archivos y directorios, asegurando la correcta ubicación de los archivos en el sistema.
         \item \textbf{API de resultados:} Se implementan rutas para servir resultados de análisis almacenados en archivos JSON. Esto incluye la lectura de directorios y el envío de datos JSON a través de una API RESTful, que permite que el cliente recupere información sobre los resultados de forma dinámica.
     \end{itemize}
     
     \item \textbf{En el cliente:}
     \begin{itemize}
         \item \textbf{Manipulación del DOM:} JavaScript se usa para modificar dinámicamente el contenido y estilo de la página web según los datos recibidos del servidor. Por ejemplo, se crean y actualizan elementos HTML, se gestionan tablas y se aplican estilos en función de las propiedades de los datos.
-        \item \textbf{Interactividad:} Se implementan funcionalidades interactivas como la ordenación de tablas y la actualización dinámica de contenido. Las tablas se ordenan basándose en las interacciones del usuario y se ocultan o muestran elementos de la interfaz según el estado de los datos.
-        \item \textbf{Llamadas a la API:} El código del cliente realiza solicitudes HTTP a la API del servidor. Los datos recuperados se utilizan para actualizar la interfaz de usuario, mostrando información relevante sobre los repositorios y sus resultados de análisis.
+        \item \textbf{Interactividad:} Se implementan funcionalidades interactivas como la ordenación de tablas y la actualización dinámica de contenido. Estas tablas se pueden ordenar basándose en las interacciones del usuario y se ocultan o muestran elementos de la interfaz según los datos recibidos.
+        \item \textbf{Llamadas a la API:} El código del cliente realiza solicitudes HTTP a la API del servidor. Los datos devueltos se utilizan para iniciar o actualizar la interfaz de usuario, mostrando información relevante sobre los repositorios y sus resultados de análisis.
     \end{itemize}
 \end{enumerate}
 
-En resumen, JavaScript juega un papel crucial tanto en el lado del servidor como en el cliente en este proyecto. La integración con Express y la manipulación dinámica del DOM permiten una experiencia de usuario fluida y una interacción cómoda y eficiente con los datos almacenados. Esta combinación de tecnologías asegura que la aplicación web sea interactiva, receptiva y funcional, cumpliendo con los estándares modernos de desarrollo web.
+En resumen, el papel de JavaScript en este proyetco es crucial tanto en el lado del servidor como en el del cliente. La integración con Express y la manipulación dinámica del DOM (Document Object Model) permiten una experiencia de usuario fluida, cómoda y eficiente con los datos almacenados. Esta combinación de tecnologías ayuda a que la aplicación web sea interactiva, receptiva y funcional, cumpliendo con los estándares modernos de desarrollo web.
 
 \section{Node.js}
-Node.js es un entorno de ejecución basado en el motor V8 de JavaScript, diseñado para ejecutar código JavaScript en el lado del servidor. Su principal fortaleza radica en su arquitectura de entrada/salida no bloqueante, lo que permite manejas múltiples conexiones de manera edificente. Esta característica lo convierte en una opción ideal para aplicaciones web en tiempo real y de alta concurrencia. Node.js ha ganado popularidad debido a su capacidad para crear aplicaciones escalables y su extenso ecosistema de paquetes, accesible a través de npm (Node Package Manager).
+Node.js es un entorno de ejecución diseñado para ejecutar código JavaScript en el lado del servidor. Node.js ha ganado popularidad debido a su capacidad para crear aplicaciones escalables y su extenso ecosistema de paquetes, accesible a través de npm (Node Package Manager).
 
 En este proyecto Node.js ha sido empleado como el entorno principal para el servidor frontend, permitiendo ejecutar el código de visualización de resultados y gestionar las interacciones con la interfaz web. Se utilizó para:
 
@@ -533,7 +449,7 @@ En este proyecto Node.js ha sido empleado como el entorno principal para el serv
 \end{enumerate}
 
 \section{Express}
-Express es un framework web minimalista para Node.js, diseñado para crear aplicaciones web y APIs de manera sencilla y eficiente. Ofrece una estructura flexible y una serie de herramientas que permiten gestionar rutas, peticiones HTTP y middleware para agregar funcionalidades adicionales a una aplicación. Al ser ligero y altamente configurable Express es ideal para construir aplicaciones escalables y robustas en entornos de desarrollo modernos.
+Express es un framework web minimalista para Node.js, diseñado para crear aplicaciones web y APIs de manera sencilla y eficiente. Nos ofrece una estructura flexible y una serie de herramientas que nos permiten gestionar rutas, peticiones HTTP y el middleware necesario para agregar funcionalidades adicionales a una aplicación. Al ser ligero y altamente configurable Express resulta ideal para construir aplicaciones escalables y robustas en entornos de desarrollo modernos.
 
 En el contexto de este proyecto Express ha sido fundamental para:
 
@@ -543,7 +459,7 @@ En el contexto de este proyecto Express ha sido fundamental para:
 \end{enumerate}
 
 \section{JSON}
-JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos que es fácil de leer y escribir para los humanos, y sencillo de interpretar y generar por las máquinas. Su estructura basada en pares clave-valor lo hace ideal para transportar datos entre un servidor y una aplicación web, o entre distintos componentes de un sistema distribuido. JSON es ampliamente utilizado en APIs y servicios web debido a su simplicidad y compatibilidad con mútliples lenguajes de programación.
+JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos cuya fortaleza radica en que es fácil de leer y escribir para los humanos, así como sencillo de interpretar y generar por las máquinas. Su estructura basada en pares clave-valor lo hace ideal para transportar datos entre un servidor y una aplicación web, o incluso entre distintos componentes de un mismo sistema. JSON es ampliamente utilizado en APIs y servicios web debido a su simplicidad y compatibilidad con múltiples lenguajes de programación.
 
 Por ejemplo, si quisiéramos almacenar la información de una persona podríamos utilizar una estructura similar a:
 
@@ -566,7 +482,7 @@ La capacidad ed JSON para representar objetos de manera sencilla ha sido esencia
 \section{VSCode}
 Visual Studio Code (VSCode) es un editor de código fuente desarrollado por Microsoft en abril de 2015. Desde entonces ha sido ampliamente adoptado por la comunidad de desarrolladores debido a su ligereza y versatilidad.
 
-VSCode ofrece una experiencia de desarrollo robusta con características como resaltado de sintaxis, autocompletado inteligente, plena integración con Git y una amplia selección de extensiones para mejor la productividad y añadir funcionalidades.
+VSCode ofrece una experiencia de desarrollo robusta con características como resaltado de sintaxis, autocompletado inteligente, plena integración con Git y una muy amplia selección de extensiones para mejor la productividad y añadir funcionalidades.
 
 En este proyecto VSCode ha sido empleado como el entorno principal de desarrollo debido a sus numerosas ventajas:
 
@@ -578,10 +494,23 @@ En este proyecto VSCode ha sido empleado como el entorno principal de desarrollo
 
 En definitiva, la flexibilidad y ligereza de VSCode lo convierte en una herramienta esencial para el desarrollo ágil y eficiente del proyecto, ayudando a mantener un flujo de trabajo organizado y estable.
 
+\section{GitHub}
+
+GitHub es una plataforma que facilita la gestión de proyectos utilizando Git, un sistema de versiones más extendido. Permite almacenar código en repositorios, donde varios desarrolladores pueden colaborar sin sobrescribir los cambios de otros mediante el uso de varias ramas, entre otras funcionalidades. 
+
+En este proyecto se ha utilizado GitHub para gestionar las versiones de código, teniendo la capacidad de retroceder, ver y recuperar cambios realizados con anterioridad. Además, puesto que el programa desarrollado tiene como objetivo realizar análisis de repositorios alojados en GitHub, hemos utilizado también la API que proporciona para obtener información relevante de los mismos.
+
 \section{Trello}
 Trello es una herramienta de gestión de proyectos basada en el navegador que utiliza la metodología Kanban, la cual permite organizar tareas de forma visual e intuitiva mediante un sistema de tableros, listas y tarjetas. Los usuarios pueden mover tarjetas entre columnas para reflejar el estado de una tarea, facilitando la visualización del progreso de proyectos.
 
-En este proyecto Trello ha sido utilizado para organizar las diferentes etapas de desarrollo, permitiendo mantener un registro de todas las tareas a realizar y el estado de las mismas. 
+En este proyecto Trello ha sido utilizado para organizar las diferentes etapas de desarrollo, permitiendo mantener un registro de todas las tareas a realizar y el estado de las mismas.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=\linewidth]{img/trello_example.png}
+    \caption{Tablero de Trello utilizado}
+    \label{fig:trello_example}
+\end{figure}
 
 \section{Postman} Postman es una herramienta utilizada para probar y desarrollar APIs, que permite a los desarrolladores enviar peticiones HTTP a un servidor y verificar las respuestas de manera intuitiva. Su interfaz gráfica facilita la creación de peticiones \texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE}, entre otras, y ofrece funcionalidades avanzadas como la creación de colecciones, pruebas automáticas y la posibilidad de compartir entornos de trabajo.
 
@@ -635,15 +564,6 @@ Postman ha sido de especial importancia para garantizar la calidad y fiabilidad 
 
 El objetivo de este proyecto es corregir y extender la funcionalidad, así como añadir una visualización web cómoda e intuitiva de los resultados obtenidos. Para ello hemos seguido los siguientes pasos:
 
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Placeholder}
-  \label{fig:arquitectura}
-\end{figure}
-
 \section{Obtención y comprensión del código existente}
 
 El primer paso es muy básico pero indispensable. Debemos realizar una copia del repositorio original para obtener así un código del que partir que podamos modificar sin alterar el original. Una tarea no complicada que quedó solventada rápidamente mediante el uso de Git y Github. Hecho esto, podemos ponernos manos a la obra y comenzar a trabajar en el que a partir de ahora será nuestro código.
@@ -692,15 +612,37 @@ En lo relativo al backend encontramos la parte del proyecto encargada de procesa
     \item \textbf{Mejora del archivo resultante del análisis} para facilitar su posterior tratamiento. Originalmente se generaban dos archivos equivalentes en formatos JSON y CSV. Aunque ambos formatos son ampliamente utilizados para el análisis de datos, hemos optado por mantener únicamente el formato JSON debido a su mayor flexibilidad para estructurar y manipular información. A diferencia del CSV, que se ajusta mejor a datos tabulares con campos claramente definidos y fijos, el JSON permite cambios más dinámicos en la estructura de los datos sin la necesidad de realizar ajustes constantes para que los campos se adapten a un formato rígido. Esto hace que el JSON sea más adecuado para futuras reestructuraciones del archivo, evitando la complejidad asociada a modificar archivos CSV cuando la estructura de los datos cambia significativamente. Al prescindir del archivo CSV, simplificamos el proceso de manejo y actualización de los datos, permitiendo una mayor versatilidad en su tratamiento y reduciendo las dificultades asociadas al ajuste de formatos estáticos como el CSV.
 
     \item \textbf{Añadida visualización de resultados desde la terminal}, en caso de que el usuario prefiera una vista rápida de los resultados sin tener que depender de la parte web. 
+    
+\end{itemize}
+\clearpage
 
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=14cm, keepaspectratio]{img/execution_local.png}
+  \includegraphics[width=\linewidth, keepaspectratio]{img/execution_local.png}
   \caption{Vista de resultados por consola tras análisis de directorio local}
   \label{fig:execution_local}
 \end{figure}
-    
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=\textheight, keepaspectratio]{img/esquema_backend_final.jpg}
+  \caption{Flujo del backend (análisis)}
+  \label{fig:execution_local}
+\end{figure}
+
+Finalmente se añadieron también otras dos opciones de ejecución: La primera de éstas es 
+
+\begin{itemize}
+    \item \textbf{Consola (-c)} para imprimir por consola resultados ya existentes, sin necesidad de realizar de nuevo el proceso de análisis.
+    \item \textbf{Lista (-l)} para listas los archivos de resultados ya existentes.
 \end{itemize}
+
+De este modo, en cualquier momento el usuario puede obtener un listado de los resultados ya existentes y visualizar por consola uno de ellos mediante la siguiente secuencia de comandos:
+
+\begin{verbatim}
+    python3 pycefrl.py -l
+    python3 pycefrl.py -c <RESULTADOS>
+\end{verbatim}
 
 \subsection{Frontend}
 
@@ -811,28 +753,44 @@ De este modo, la validación del código añadido o editado se ha ido realizando
 
 Como ya ha sido mencionado el comienzo del desarrollo consistió en la creación de una versión estable, puesto que en un principio nos encontramos con múltiples errores de ejecución. Se decidió también, de cara a facilitar la compresión del código, refractorizar gran parte de éste. Esta versión estable se tomó tras realizar los cambios justos y necesarios para solucionar aquellos procesos que producían los errores, y para poder acceder en el futuro rápidamente a ella (para poder comprobar en todo momento el funcionamiento original) se añadió con Git una rama local bajo del nombre "original-fixed" a partir del commit en que se subieron esos últimos cambios. Esto estableció el primer 'ancla' en el proyecto, proporcionándome un punto de referencia al que poder regresar si más adelante me encontrara con errores críticos difíciles de rastrear, además de permitirme realizar las primeras pruebas, aunque fuera del código original.
 
-Tras esto los cambios se fueron probando poco a poco, a medida que se desarrollaban. Sin embargo, al introducir los cambios que incorporaban llamadas a la API de GitHub se me presentó la necesidad de probar dichas llamadas de algún modo. Ejecutar el análisis era una opción poco eficiente, dado que se perdería mucho tiempo ejecutando código cuando sólo estamos interesados en la llamada. En ocasiones muy concretas utilicé la herramienta "curl" desde la terminal, que me permite realizar solicitudes HTTP, pero resultaba incómoda cuando se trataba se llamadas complejas. Es por ello que opté por usar \textbf{Postman}.
-
-Postman me proporcionó una interfaz para desarrollar y probar APIs. Creé una nueva colección que contendría todas las llamadas que se realizan en el proyecto. Además, me permite añadir fácilmente datos que quiera añadir a la solicitud, así como ejemplos de ejecución de dichas llamadas.
+Tras esto los cambios se fueron probando poco a poco, a medida que se desarrollaban. Sin embargo, al introducir los cambios que incorporaban llamadas a la API de GitHub se me presentó la necesidad de probar dichas llamadas de algún modo. Ejecutar el análisis era una opción poco eficiente, dado que se perdería mucho tiempo ejecutando código cuando sólo estamos interesados en la llamada. En ocasiones muy concretas utilicé la herramienta \texttt{curl} desde la terminal, que me permite realizar solicitudes HTTP, pero resultaba incómoda cuando se trataba se llamadas complejas.
 
 \vspace{1em}
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{img/postman.png}
-    \caption{Interfaz de la herramienta Postman}
+    \includegraphics[width=15cm]{img/curl_example.png}
+    \caption{Ejemplo de llamada con \textit{curl}}
     \label{fig:postman}
 \end{figure}
 
-En la figura 5.1 podemos ver la interfaz de Postman. En el lado izquierdo encontramos un árbol de la colección de llamadas utilizadas en el proyecto. Con esto podemos simplemente seleccionar la llamada que necesitamos, editarla con la información necesaria (bloque superior), hacerla y visualizar la respuesta (bloque inferior). Esto permitió obtener las respuestas a cualquier llamada de manera rápida y clara. Además, el formato empleado para las respuestas a las solicitudes es JSON, el cuual, como ya hemos visto, permite una fácil manipulación de los datos.
+Como podemos ver en la figura 5.1 la herramienta \texttt{curl} tiene como gran ventaja la agilidad que proporciona al poder ser utilizada desde la terminal, de modo que puede resultar de gran ayuda para consultas rápidas. Sin embargo, dado el número de llamadas que debía realizar a lo largo del proyecto realizar las pruebas de esta manera se volvía un proceso tedioso, sobre todo para llamadas más complejas. Además, una necesidad común durante el desarrollo fue querer acceder de nuevo a las respuestas de llamadas ya probadas anteriormente, obligando a tener que repetir la llamada de nuevo. Es por ello que opté por usar \textbf{Postman}.
+
+Postman me proporcionó una interfaz para desarrollar y probar tanto la API de GitHub como la desarrollada por mí para el frontend. Creé una nueva colección que contendría todas las llamadas que se realizan en el proyecto. Esta herramienta me permite añadir y editar fácilmente solitudes que quiera realizar,con todo tipo de información. Además, permite guardar como ejemplos de ejecución de dichas llamadas, lo cual resolvió el problema de querer acceder de nuevo a los resultados de una llamada. Por ejemplo, a menudo necesitaba comprobar la estructura de la respuesta o el nombre del valor que quería extraer de ésta, y guardar de manera permanente estas respuestas me permitió satisfacer esta necesidad.
+
+\vspace{2em}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/postman.png}
+    \caption{Ejemplo de llamada con Postman}
+    \label{fig:postman}
+\end{figure}
+\clearpage
+
+En la figura 5.2 podemos ver la interfaz de Postman. En el lado izquierdo encontramos un árbol de la colección de llamadas utilizadas en el proyecto. Con esto podemos simplemente seleccionar la llamada que necesitamos, editarla con la información necesaria (bloque superior), hacerla y visualizar la respuesta (bloque inferior). Esto permitió obtener las respuestas a cualquier llamada de manera rápida y clara. Además, el formato empleado para las respuestas a las solicitudes es JSON, el cual, como ya hemos visto, permite una fácil manipulación de los datos.
 
 En nuestro caso gran parte de las llamadas son a la API de GitHub, quien implementa medidas de seguridad que limitan las solicitudes desde una misma dirección IP si se detecta un número excesivo en un corto período de tiempo. Esto lo hace con el fin para prevenir abusos y proteger la plataforma de posibles ataques automatizados. Es por ello que se incluyó la opcion de incluir un token en el archivo de ajustes. En caso de que el usuario exceda el límite de solicitudes se le presentará un mensaje de error indicando qué debe hacer para solventar este problema: 
 
-\begin{figure}[h]
+\vspace{1em}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{img/results/backend_exe_r_api_error.png}
+    \caption{Ejemplo de error por exceso de llamadas a la API}
+    \label{fig:api_limit}
 \end{figure}
+\vspace{1em}
 
-En un principio se incluyeron únicamente las llamadas que ahora se encuentran bajo la carpeta \textit{Backend}, pero en al retomar el desarrollo de la parte web surgió la necesidad de añadir las solicitudes realizadas aquí también. En este caso las llamadas son a nuestro propio servidor local que levantamos para mantener la página web, y devuelve tanto los datos de los análisis en formato JSON como el HTML necesario para el renderizado de cada página.
+En un principio se incluyeron únicamente las llamadas que ahora se encuentran bajo la carpeta \textit{Backend}, pero en al retomar el desarrollo de la parte web surgió la necesidad de añadir las solicitudes realizadas aquí también. En este caso las llamadas son a nuestro propio servidor local que levantamos para mantener la página web, el cual funciona como una API REST y devuelve tanto los datos de los análisis en formato JSON como el HTML necesario para el renderizado de cada página.
 
 Las pruebas finales consistieron en comprobar la correcta visualización de la parte web, lo cual consiste principalmente en levantar el servidor y navegar por las páginas, y finalmente comprobar el proceso completo, realizando primero un análisis y arrancando luego el servidor para comprobar que los datos se muestran en la web.
 
@@ -1106,14 +1064,20 @@ npm install
 \end{verbatim}
 
 \subsection{Estructura del Proyecto}
-El proyecto incluye los siguientes componentes:
+El proyecto incluye los siguientes componentes principales:
 
 \begin{itemize}
     \item \textbf{pycefr.py}: El ejecutable principal que realiza el análisis.
     \item \textbf{backend/}: Carpeta que contiene los archivos que realizan el análisis del código
     \item \textbf{frontend/}: Carpeta que contiene la interfaz de usuario basada en Node.js para visualizar los resultados.
     \item \textbf{results/}: Carpeta donde se almacenan los resultados del análisis.
+\end{itemize}
+
+Se incluyen también varios archivos secundarios, encargados de la configuración de la aplicación o de 
+\begin{itemize}
     \item \textbf{settings.json}: Archivo de configuración para personalizar la herramienta.
+    \item \textbf{pycefrl.postman_collection.json}: Colección de Postman con las llamadas involucradas en el proyecto.
+    \item \textbf{requirements.txt}: Archivo utilizado para instalar los módulos de Python necesarios.
 \end{itemize}
 
 \subsection{Cómo Usar pycefr}
@@ -1191,9 +1155,22 @@ El archivo \texttt{settings.json} permite personalizar la configuración de la h
     ],
     "API-KEY": "customapikey1234",
     "addLocalSuffix": true
+    "autoDisplayConsole": true
 }
 \end{verbatim}
 
+\subsection{Importación de colección Postman}
+
+En caso de querer probar las llamadas realizadas en el código tenemos la posibilidad de importar en Postman el archivo \texttt{pycerfl.postman\_collection.json} y ver todas las solicitudes con ejemplos de uso. Para ello abrimos Postman y en seleccionamos la opción ``Import'' en la parte superior. Esto nos abrirá el siguiente panel:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{img/postman_import.png}
+    \caption{Panel de importación en Postman}
+    \label{fig:postman_import}
+\end{figure}
+
+Añadimos el archivo ya sea haciendo click o arrastrándolo directamente. Tras esto ya tendremos acceso a todas las llamadas involucradas en el proyecto.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFIA %
