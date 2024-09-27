@@ -186,7 +186,7 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-El objetivo principal de este proyecto es rediseñar y extender la funcionalidad de la ya existente aplicación "pycefrl", con el fin de hacerla más accesible y cómo al usuario. Esta herramienta tiene como labor realizar análisis de código en el lenguaje Python para obtener un nivel de complejidad ajustado a los niveles CEFRL (Common European Framework of Reference for Languages), el cual se ha convertido en un estándar en Europa.
+El objetivo principal de este proyecto es rediseñar y extender la funcionalidad de la ya existente aplicación ``pycefrl'', con el fin de hacerla más accesible y cómo al usuario. Esta herramienta tiene como labor realizar análisis de código en el lenguaje Python para obtener un nivel de complejidad ajustado a los niveles CEFRL (Common European Framework of Reference for Languages), el cual se ha convertido en un estándar en Europa.
 
 El desarrollo de este proyecto ha involucrado numerosas tecnologías, siendo las principales los lenguajes de programación Python en lo referente al análisis del código y JavaScript para la visualización web de los resultados, junto con HTML y CSS. Han sido de vital importancia también el formato de datos JSON para la manipulación de la información y por supuesto GitHub para alojar tanto el código trabajado como el código a analizar.
 
@@ -197,9 +197,9 @@ El desarrollo de este proyecto ha involucrado numerosas tecnologías, siendo las
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-The primary objective of this project is the redesign and extend de functionality of the existing "pycefrl" applicaction, with the aim of making it more accessible and user-friendly. This tool performas code analysis in the Python programming language to determine a complexity level aligned with the CEFRL (Common European Framework of Reference for Languages), which has become a standard in Europe.
+The primary objective of this project is the redesign and extend de functionality of the existing ``pycefrl'' applicaction, with the aim of making it more accessible and user-friendly. This tool performas code analysis in the Python programming language to determine a complexity level aligned with the CEFRL (Common European Framework of Reference for Languages), which has become a standard in Europe.
 
-The development of this project has involved numerous technologies, with the primary ones being Python for code analysis and JavaScript for web-based visualizatio n of the results, along with HTML and CSS. The JSON data format has also been crucial for information manipulation, along with of course GitHub, which has been used to host both the worked-on code and the code to be analyzed.
+The development of this project has involved numerous technologies, with the primary ones being Python for code analysis and JavaScript for web-based visualization of the results, along with HTML and CSS. The JSON data format has also been crucial for information manipulation, along with of course GitHub, which has been used to host both the worked-on code and the code to be analyzed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -574,7 +574,7 @@ De este modo, hubo que virar el enfoque hacia una tarea diferente, volviéndose 
 
 \section{Creación de un registro de tareas}
 
-El siguiente paso fue crear un nuevo tablero de Trello, del cual ya hemos hablado, para comenzar a recoger las tareas que iban apareciendo. Al principio del desarrollo estas tareas eran tan básicas como "Revisión y comprensión del código" y se volverían más específicas a medida que aumentara nuestro conocimiento sobre el proyecto.
+El siguiente paso fue crear un nuevo tablero de Trello, del cual ya hemos hablado, para comenzar a recoger las tareas que iban apareciendo. Al principio del desarrollo estas tareas eran tan básicas como ``Revisión y comprensión del código'' y se volverían más específicas a medida que aumentara nuestro conocimiento sobre el proyecto.
 
 Se realizaron diagramas de flujo para representar los proceso, con el fin de intentar entender y dejar anotado qué se realiza, dónde y cuándo.
 
@@ -584,7 +584,7 @@ Comencé a editar pequeños fragmentos de código, a fin de intentar solucionar 
 
 De la parte del proyecto encargada se tomar y analizar los archivos sólo parecía funcionar (no daba error al instante) una de las 3 opciones, la de analizar un repositorio dado un enlace de GitHub. Las otras dos, analizar un usuario de Github y analizar un directorio local, las dejé temporalmente de lado para centrarme en la primera. Si lograba hacer funcionar una de ellas, las otras dos no debían ser muy diferentes.
 
-Toda esta parte conforma lo que en el proyecto he denominado "backend", dando a entender que es el código encargado de hacer el procesamiento y cálculos necesarios para obtener los resultados. La otra gran parte del proyecto, el llamado "frontend", sufría el mismo problema y daba errores de ejecución. De nuevo opté por rehacer el archivo principal que manejaba esa parte, obteniendo así unas primeras versiones ejecutables del código.
+Toda esta parte conforma lo que en el proyecto he denominado ``backend'', dando a entender que es el código encargado de hacer el procesamiento y cálculos necesarios para obtener los resultados. La otra gran parte del proyecto, el llamado ``frontend'', sufría el mismo problema y daba errores de ejecución. De nuevo opté por rehacer el archivo principal que manejaba esa parte, obteniendo así unas primeras versiones ejecutables del código.
 
 \section{Reestructuración y mejoras preparativas}
 
@@ -646,7 +646,7 @@ De este modo, en cualquier momento el usuario puede obtener un listado de los re
 
 \subsection{Frontend}
 
-Utilizamos el término "frontend" para la parte del proyecto encargada de la web. En nuestro caso usamos la web para la navegación y visualización de los archivos producidos como resultado de los análisis.
+Utilizamos el término ``frontend'' para la parte del proyecto encargada de la web. En nuestro caso usamos la web para la navegación y visualización de los archivos producidos como resultado de los análisis.
 
 La versión original del frontend es funcional, en el sentido de que cumple su labor, pero presentaba una estructura muy básica y poco modular. Todo el código relevante estaba contenido en un único archivo `main.js`, que generaba dinámicamente un archivo HTML a partir de unas plantillas e insertaba directamente toda la información en la página. Esto no solo dificultaba la escalabilidad del proyecto, sino que también limitaba la separación de responsabilidades entre las diferentes partes del frontend y hacía más complicado el mantenimiento del código a largo plazo.
 
@@ -685,13 +685,13 @@ Toda esta reestructuración implica naturalmente un cambio absoluto en el funcio
     \centering
     \includegraphics[height=19cm, keepaspectratio]{img/esquema_frontend_original.jpg}
     \caption{Flujo del frontend original}
-    \label{fig:new_structure}
+    \label{fig:original_frontend}
 \end{figure}
 \begin{figure} [H]
     \centering
     \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{img/esquema_frontend_final.jpg}
     \caption{Flujo del frontend rediseñado}
-    \label{fig:new_structure}
+    \label{fig:final_frontend}
 \end{figure}
 
 En el \textbf{flujo original} ejecutamos casi exclusivamente el archivo 'main.js', el cual realiza todo el trabajo. Éste busca en el sistema archivos de resultados JSON y extrae de ellos la información relevante a mostrar. Tras esto carga unas plantillas para crear dos archivos HTML:
@@ -751,7 +751,7 @@ Puesto que el proyecto consiste esencialmente en extender y mejorar toda la func
 
 De este modo, la validación del código añadido o editado se ha ido realizando en la mayor parte de los casos durante la propia codificación. A menudo se han ido probando los cambios a medida que se implementaban en la medida de lo posible. Naturalmente, en la mayoría de ocasiones estas pruebas se hacían por bloques, y no ha sido hasta la fase final del desarrollo (último mes, mes y medio) que se comenzaron a hacer pruebas del proceso completo. Esto se debe a que desde el principio se ha tenido una idea de producto final que presentaba muchas incompatibilidades (en cuanto a código se refiere) con el producto original, y resulta inconveniente, además de una más que ineficiente inversión del tiempo de desarrollo, asegurar la compatibilidad completa de las partes en todo momento.
 
-Como ya ha sido mencionado el comienzo del desarrollo consistió en la creación de una versión estable, puesto que en un principio nos encontramos con múltiples errores de ejecución. Se decidió también, de cara a facilitar la compresión del código, refractorizar gran parte de éste. Esta versión estable se tomó tras realizar los cambios justos y necesarios para solucionar aquellos procesos que producían los errores, y para poder acceder en el futuro rápidamente a ella (para poder comprobar en todo momento el funcionamiento original) se añadió con Git una rama local bajo del nombre "original-fixed" a partir del commit en que se subieron esos últimos cambios. Esto estableció el primer 'ancla' en el proyecto, proporcionándome un punto de referencia al que poder regresar si más adelante me encontrara con errores críticos difíciles de rastrear, además de permitirme realizar las primeras pruebas, aunque fuera del código original.
+Como ya ha sido mencionado el comienzo del desarrollo consistió en la creación de una versión estable, puesto que en un principio nos encontramos con múltiples errores de ejecución. Se decidió también, de cara a facilitar la compresión del código, refractorizar gran parte de éste. Esta versión estable se tomó tras realizar los cambios justos y necesarios para solucionar aquellos procesos que producían los errores, y para poder acceder en el futuro rápidamente a ella (para poder comprobar en todo momento el funcionamiento original) se añadió con Git una rama local bajo del nombre ``original-fixed'' a partir del commit en que se subieron esos últimos cambios. Esto estableció el primer 'ancla' en el proyecto, proporcionándome un punto de referencia al que poder regresar si más adelante me encontrara con errores críticos difíciles de rastrear, además de permitirme realizar las primeras pruebas, aunque fuera del código original.
 
 Tras esto los cambios se fueron probando poco a poco, a medida que se desarrollaban. Sin embargo, al introducir los cambios que incorporaban llamadas a la API de GitHub se me presentó la necesidad de probar dichas llamadas de algún modo. Ejecutar el análisis era una opción poco eficiente, dado que se perdería mucho tiempo ejecutando código cuando sólo estamos interesados en la llamada. En ocasiones muy concretas utilicé la herramienta \texttt{curl} desde la terminal, que me permite realizar solicitudes HTTP, pero resultaba incómoda cuando se trataba se llamadas complejas.
 
@@ -845,7 +845,7 @@ Las opciones \texttt{-u <USER>} nos permite analizar un repositorio dado un nomb
 
 \subsection{Directorio (-d)}
 
-El caso \texttt{-d <DIR>} realiza un análisis de un repositorio local, dada la ruta del mismo. En este caso hemos clonado antes el repositorio que estamos empleando para las pruebas en la carpeta "tmp/", cuya finalidad es albergar archivos temporales cuya eliminación no altera la ejecución del programa.
+El caso \texttt{-d <DIR>} realiza un análisis de un repositorio local, dada la ruta del mismo. En este caso hemos clonado antes el repositorio que estamos empleando para las pruebas en la carpeta ``tmp/'', cuya finalidad es albergar archivos temporales cuya eliminación no altera la ejecución del programa.
 
 \vspace{1em}
 \begin{figure}[hb]
@@ -857,7 +857,7 @@ El caso \texttt{-d <DIR>} realiza un análisis de un repositorio local, dada la 
 
 Al tratarse de un directorio local es de esperar que no se incluya la información relativa al repositorio (puesto que no es un repositorio). Sin embargo, dado lo común que es trabajar con repositorios integrados en GitHub la aplicación comprueba si es el caso del directorio en cuestión. En caso de serlo, pregunta al usuario si prefiere analizar el repositorio remoto. Esto puede resultar ventajoso en caso de estar interesado en realizar un análisis con los cambios más recientes. 
 
-Si el usuario responde de manera afirmativa se procede a realizar el análisis del repositorio, ignorando los archivos locales. En caso negativo, se analiza el directorio indicado anteriormente. El archivo resultante se generará añadiendo el sufijo "\_local" al nombre del mismo. Esto da al usuario la oportunidad de realizar ambos análisis (local y del repositorio remoto) y no sobreescribir el archivo resultante (se toma el nombre del directorio o repositorio). Este comportamiento se puede activar o desactivar en el archivo de ajustes \texttt{settings.txt}, estableciendo en \textit{false} la opción \textit{addLocalSuffic}.
+Si el usuario responde de manera afirmativa se procede a realizar el análisis del repositorio, ignorando los archivos locales. En caso negativo, se analiza el directorio indicado anteriormente. El archivo resultante se generará añadiendo el sufijo ``\_local'' al nombre del mismo. Esto da al usuario la oportunidad de realizar ambos análisis (local y del repositorio remoto) y no sobreescribir el archivo resultante (se toma el nombre del directorio o repositorio). Este comportamiento se puede activar o desactivar en el archivo de ajustes \texttt{settings.txt}, estableciendo en \textit{false} la opción \textit{addLocalSuffic}.
 
 \subsection{List (-l)}
 
@@ -887,14 +887,14 @@ Es de especial relevancia mencionar el archivo de ajustes \texttt{settings.json}
 
 A menudo los proyectos requieren de numerosos módulos y dependencias para su correcta ejecución. Éstos deben naturalmente estar instalados a la hora de ejecutar el proyecto, de lo contrario se producirían errores de ejecución. Por ejemplo, en este proyecto se está utilizando Python, y en este caso se requeren, entre otros, los módulos requests (utilizado para realizar solicitudes HTTP) o tabulate (para dar formato a los datos al mostrarlos por pantalla). Podríamos instalarlos en nuestra máquina, añadiéndolos a la versión de Python de ésta. Sin embargo, esto puede resultar problemático en caso de trabajar en varios proyectos que utilicen versiones distintas de un mismo módulo o dependencia.
 
-La solución más ágil y común a este problema es la creación de un entorno virtual. Un entorno virtual es una herramienta que permite crear un espacio aislado en el que se pueden instalar y gestionar dependencias de proyectos sin interferir con otras instalaciones o proyectos en el mismo sistema. En nuestro caso hemos creado el entorno "myenv" para ello. Al crearse obtenemos un lienzo en blanco de Python al que añadir dependencias, lo cual hacemos mediante el uso del archivo \texttt{requirements.txt}. Esto nos sirve para el backend, escrito en Python; para el frontend, escrito en JavaScript, utilizamos una herramienta equivalente, llamada "npm".
+La solución más ágil y común a este problema es la creación de un entorno virtual. Un entorno virtual es una herramienta que permite crear un espacio aislado en el que se pueden instalar y gestionar dependencias de proyectos sin interferir con otras instalaciones o proyectos en el mismo sistema. En nuestro caso hemos creado el entorno ``myenv'' para ello. Al crearse obtenemos un lienzo en blanco de Python al que añadir dependencias, lo cual hacemos mediante el uso del archivo \texttt{requirements.txt}. Esto nos sirve para el backend, escrito en Python; para el frontend, escrito en JavaScript, utilizamos una herramienta equivalente, llamada ``npm''.
 
-En conclusión, estas carpetas de dependencias se almacenan dentro del proyecto y a menudo constan de un número muy elevado de archivos. Puesto que nuestro programa se dedica a analizar archivos, no nos conviene que se "entretenga" analizando estos numerosos (a veces incluso cientos), archivos. Es por ello en el archivo de ajustes hemos incluido una opción \textit{"ignoreFolders"}, en el que podemos incluir las carpetas que queremos excluir del análisis:
+En conclusión, estas carpetas de dependencias se almacenan dentro del proyecto y a menudo constan de un número muy elevado de archivos. Puesto que nuestro programa se dedica a analizar archivos, no nos conviene que se ``entretenga'' analizando estos numerosos (a veces incluso cientos), archivos. Es por ello en el archivo de ajustes hemos incluido una opción \textit{``ignoreFolders''}, en el que podemos incluir las carpetas que queremos excluir del análisis:
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{img/results/ignore_folders.png}
-    \caption{Ejemplo de uso de opción "ignoreFolders"}
+    \caption{Ejemplo de uso de opción ``ignoreFolders''}
     \label{fig:ignore_folders}
 \end{figure}
 
@@ -922,7 +922,7 @@ Con esto el servidor está preparado para recibir solicitudes. Por defecto se in
 
 En este caso aparecen dos resultados, referentes a los dos análisis que hemos realizado. Aquí no podemos ver más que un breve resumen, para dar al usuario una pequeña idea del repositorio o directorio analizado. En caso de tratarse de un repositorio este resumen mostrará algunos datos relevantes sobre el mismo.
 
-Al hacer click en el botón "Ver más" nos dirigimos a la página del propio análisis. En este caso seleccionaremos el primero de ellos.
+Al hacer click en el botón ``Ver más'' nos dirigimos a la página del propio análisis. En este caso seleccionaremos el primero de ellos.
 
 Diferenciamos en esta página dos bloques:
 
@@ -934,7 +934,7 @@ Diferenciamos en esta página dos bloques:
 
 Conviene mencionar que en el caso de seleccionar un directorio local no se muestra el primer bloque, de \textbf{información general}, puesto que no hay manera de mostrar, entre otros, el tiempo empleado en su edición o el número de archivos editados. Es por ello que he considerado mejor opción excluirlo antes que dedicar únicamente este bloque a mostrar el nombre del proyecto. Dicho esto, en línea con la política general del proyecto, se han creado estructuras y páginas de estilos pensando ya en futuros cambios o ampliaciones, en caso de querer mostrar más datos o incluso más bloques.
 
-Por último, en todas las páginas (incluida la home) encontramos en la parte izquierda un menu para navegar por la web. Este menú se puede ocultar o mostrar haciendo click en el botón "burguer" en la esquina superior derecha, y de momento tiene un único enlace navegable para redirigirse a la home. Dada la funcionalidad actual del proyecto no he visto necesario añadir más opciones, pero me parece conveniente dejar hecho el propio menú, de modo que de ser necesario simplemente haya que añadir enlaces sin preocuparse del comportamiento del menú.
+Por último, en todas las páginas (incluida la home) encontramos en la parte izquierda un menu para navegar por la web. Este menú se puede ocultar o mostrar haciendo click en el botón ``burguer'' en la esquina superior derecha, y de momento tiene un único enlace navegable para redirigirse a la home. Dada la funcionalidad actual del proyecto no he visto necesario añadir más opciones, pero me parece conveniente dejar hecho el propio menú, de modo que de ser necesario simplemente haya que añadir enlaces sin preocuparse del comportamiento del menú.
 
 \vspace{1em}
 \begin{figure}[ht]
@@ -1147,7 +1147,7 @@ El archivo \texttt{settings.json} permite personalizar la configuración de la h
 \subsubsection{Ejemplo de settings.json}
 \begin{verbatim}
 {
-    "ignoreFolders": [
+    ``ignoreFolders'': [
         "node_modules/",
         "myenv/",
         ".git/",
