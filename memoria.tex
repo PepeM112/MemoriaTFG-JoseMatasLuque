@@ -301,7 +301,7 @@ Los objetivos específicos de este trabajo se pueden definir de la siguiente man
 
 \begin{itemize} 
     \item Optimizar el código existente para asegurar que el programa cumpla con los requisitos mínimos necesarios para su desarrollo futuro. 
-    \item Implementar una funcionalidad de "plug-and-play" que permita a cualquier usuario descargar y utilizar el programa con una configuración mínima. 
+    \item Implementar una funcionalidad de ``plug-and-play'' que permita a cualquier usuario descargar y utilizar el programa con una configuración mínima. 
     \item Incorporar un paquete de requisitos que incluya todas las dependencias y módulos necesarios para la correcta ejecución de la aplicación. 
     \item Mejorar la visualización de los resultados en formato JSON, facilitando su análisis posterior. 
     \item Desarrollar una interfaz web para la visualización de resultados, proporcionando una forma intuitiva de navegar entre los análisis realizados. 
@@ -309,9 +309,9 @@ Los objetivos específicos de este trabajo se pueden definir de la siguiente man
     \item Añadir registros detallados durante el proceso de análisis, para que el usuario pueda monitorizar el progreso y evitar la incertidumbre sobre el estado de ejecución en proyectos de larga duración. 
     \item  Reestructurar la arquitectura del código, reorganizando el árbol de directorios para asegurar una disposición lógica y coherente de los archivos, de acuerdo con los estándares recomendados en la industria. 
     \item Eliminar redundancias en el código e incorporar documentación detallada. 
-    \item Ampliar el análisis con información adicional sobre el repositorio GitHub examinado, incluyendo datos relevantes sobre el autor y otros metadatos. \end{itemize}
+    \item Ampliar el análisis con información adicional sobre el repositorio GitHub examinado, incluyendo datos relevantes sobre el autor y otros metadatos.
     \item Ampliar el análisis con nuevos elementos del lenguaje Python no considerados en la primera versión.
-
+\end{itemize}
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
@@ -323,7 +323,7 @@ El tiempo total asignado para el desarrollo del trabajo fue de seis meses. Duran
 
 Dado que el proyecto se basa en la extensión de una aplicación preexistente, la primera fase consistió en comprender la estructura y funcionalidad del código ya implementado. Este proceso requirió más tiempo del estimado inicialmente, debido a la cantidad de errores, la falta de organización y la ausencia de documentación adecuada en el código existente.
 
-Concluida esta fase de análisis, la primera tarea fue implementar la funcionalidad "plug-and-play". Sin embargo, este proceso se prolongó más de lo previsto debido a las dificultades para comprender el comportamiento del sistema durante la ejecución, entre otros motivos porque inicialmente presentaba fallos críticos que impedían su correcto funcionamiento.
+Concluida esta fase de análisis, la primera tarea fue implementar la funcionalidad ``plug-and-play''. Sin embargo, este proceso se prolongó más de lo previsto debido a las dificultades para comprender el comportamiento del sistema durante la ejecución, entre otros motivos porque inicialmente presentaba fallos críticos que impedían su correcto funcionamiento.
 
 Al finalizar el segundo mes de desarrollo, y tras haber establecido una base mínima operativa, pude realizar las primeras pruebas de ejecución, verificando los procesos a medida que los desarrollaba. Durante el tercer mes, me enfoqué en reescribir el código, eliminando una considerable cantidad de elementos redundantes, ineficientes e incluso obsoletos, garantizando además que tanto el código como la documentación cumplieran con los estándares de la industria.
 
@@ -803,7 +803,7 @@ Las pruebas finales consistieron en comprobar la correcta visualización de la p
 \chapter{Resultados}
 \label{chap:resultados}
 
-En este capítulo procederemos a ver ejemplos de uso de la aplicación. Para ello hemos tomado el repositorio \href{https://github.com/wohlert/semi-supervised-pytorch}{semi-supervised-pytorch}. Se trata de un repositorio público de Github de un tamaño entre pequeño y moderado con el que se han ido realizando numerosas pruebas a lo largo del desarrollo del proyecto.
+En este capítulo procederemos a ver ejemplos de uso de la aplicación. Para ello hemos tomado el repositorio https://github.com/wohlert/semi-supervised-pytorch. Se trata de un repositorio público de Github de un tamaño entre pequeño y moderado con el que se han ido realizando numerosas pruebas a lo largo del desarrollo del proyecto.
 
 \section{Backend}
 
@@ -963,7 +963,7 @@ Como hemos visto a lo largo de la sección de resultados se han cumplido la mayo
 
 La mejora del código existente forma parte de casi todos los objetivos planteados. Sin embargo, considero que conviene mencionarlo como uno independiente para destacar el trabajo de refractorización del código en aras de simplificar su comprensión y edición. La abundante documentación añadida sirve el mismo propósito: facilitar la futura edición del proyecto.
 
-\subsection{Implementación de funcionalidad "plug-and-play"}
+\subsection{Implementación de funcionalidad ``plug-and-play''}
 
 Personalmente éste era uno de los objetivos que primero me plantée y que consideraba prioritario. Me parecía de vital importancia dotar al usuario de la capacidad de ejecutar el programa nada más descargarlo. La inclusión de los archivos 'requisitos.txt' y 'package.json' para gestionar las dependencias del backend y del frontend, respectivamente, permiten a al usuario instalar en un par de segundos todo lo necesario. Esto junto con el cambio de rutas estáticas a rutas relativas en función del entorno de ejecución dan por cumplido este objetivo.
 
@@ -1076,7 +1076,7 @@ El proyecto incluye los siguientes componentes principales:
 Se incluyen también varios archivos secundarios, encargados de la configuración de la aplicación o de 
 \begin{itemize}
     \item \textbf{settings.json}: Archivo de configuración para personalizar la herramienta.
-    \item \textbf{pycefrl.postman_collection.json}: Colección de Postman con las llamadas involucradas en el proyecto.
+    \item \textbf{pycefrl.postman\_collection.json}: Colección de Postman con las llamadas involucradas en el proyecto.
     \item \textbf{requirements.txt}: Archivo utilizado para instalar los módulos de Python necesarios.
 \end{itemize}
 
