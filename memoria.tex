@@ -398,7 +398,7 @@ Una de sus mayores virtudes es la presencia de una amplia biblioteca estándar y
 En el contexto de este proyecto Python ha sido utilizado como lenguaje principal para desarrollar la lógica del análisis, aprovechando su capacidad para manejar estructuras complejas de datos, así como su compatibilidad con bibliotecas de análisis, las cuales han sido cruciales para la tarea. La flexibilidad del lenguaje ha permitido una rápida iteración y mejora del código, facilitando también la integración con otras tecnologías.
 
 \section{HTML}
-HTML (HyperText Markup Language) es el lenguaje de marcado estándar para la creación y estructuración de documentos en la web. Define la estructura básica de las páginas web mediante el uso de etiquetas y atributos que organizan el contenido en elementos como encabezados, párrafos, listas, enlaces y multimedia. HTML proporciona el esqueleto de las páginas web, permitiendo a los navegadores interpretar y mostrar el contenido de manera coherente y estructurada.
+HTML (HyperText Markup Language) \cite{duckett_html_css} es el lenguaje de marcado estándar para la creación y estructuración de documentos en la web. Define la estructura básica de las páginas web mediante el uso de etiquetas y atributos que organizan el contenido en elementos como encabezados, párrafos, listas, enlaces y multimedia. HTML proporciona el esqueleto de las páginas web, permitiendo a los navegadores interpretar y mostrar el contenido de manera coherente y estructurada.
 
 En concreto, se utilizó HTML5, la versión más reciente del lenguaje, que introduce mejoras significativas con respecto a sus predecesores. HTML5 incluye nuevas etiquetas semánticas que mejoran la estructura del documento y la accesibilidad como \texttt{header}, \texttt{footer}, \texttt{article} y \texttt{section}. Estas etiquetas no sólo proporcional una estructura más clara y lógica para los documentos, sino que también facilitan la optimización para motores de búsqueda (SEO) y la integración con tecnlogías modernas. Además, HTML5 soporta de manera nativa elementos multimedia como \texttt{video} y \texttt{audio}, eliminando la hasta ahora necesaria incorporación de plugins adicionales y permitiendo una experiencia de usuario más rica y fluida.
 
@@ -410,14 +410,14 @@ CSS (Cascading Style Sheets) es el lenguaje de hoja de estilos utilizado para de
 En este proyecto, CSS ha sido empleado para mejorar la apariencia de la interfaz web, garantizando qeu los resultados visualizados fueran estéticamente atracticos y fáciles de interpretar. Además, CSS ha permitido personalizar el diseño para asegurar que la interfaz fuera todalmente responsiva, adptándose a dispotivos móviles y de escritorio sin pérdida de funcionalidad o usabilidad.
 
 \section{JavaScript}
-JavaScript es uno de los lenguajes de programación más extendidos a día de hoy. Es utilizado principalmente para el desarrollo de aplicaciones web, aunque no se limita únicamente a ese uso. En ese ámbito suele ir acompañado de HTML y CSS, donde HTML conforma el esqueleto de la página, CSS la define la apariencia y JavaScript la lógica de los elementos. 
+JavaScript \cite{haverbeke_eloquentjs} es uno de los lenguajes de programación más extendidos a día de hoy. Es utilizado principalmente para el desarrollo de aplicaciones web, aunque no se limita únicamente a ese uso. En ese ámbito suele ir acompañado de HTML y CSS, donde HTML conforma el esqueleto de la página, CSS la define la apariencia y JavaScript la lógica de los elementos. 
 
 Durante décadas JavaScript ha impulsado la interactividad de las páginas web modernas y lo largo de los años ha ido evolucionado con frameworks y librerías que amplían sus funcionalidades y simplifican gran parte de los procesos, facilitando el desarrollo de aplicaciones complejas tanto en el lado del cliente como en el servidor.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{img/prog_languages_popularity.png}
-    \caption{Lenguajes de programación más usados en 2023. Fuente: DevJobsScanner}
+    \caption{Lenguajes de programación más usados en 2023. Fuente: DevJobsScanner \cite{anyadike2023_programming}}
     \label{fig:prog-languages}
 \end{figure}
 En este proyecto, JavaScript se ha utilizado para diversos propósitos:
@@ -441,7 +441,7 @@ En este proyecto, JavaScript se ha utilizado para diversos propósitos:
 En resumen, el papel de JavaScript en este proyecto es crucial tanto en el lado del servidor como en el del cliente. La integración con Express y la manipulación dinámica del DOM (Document Object Model) permiten una experiencia de usuario fluida, cómoda y eficiente con los datos almacenados. Esta combinación de tecnologías ayuda a que la aplicación web sea interactiva, receptiva y funcional, cumpliendo con los estándares modernos de desarrollo web.
 
 \section{Node.js}
-Node.js es un entorno de ejecución diseñado para ejecutar código JavaScript en el lado del servidor. Node.js ha ganado popularidad debido a su capacidad para crear aplicaciones escalables y su extenso ecosistema de paquetes, accesible a través de npm (Node Package Manager).
+Node.js \cite{casciaro_nodejs} es un entorno de ejecución diseñado para ejecutar código JavaScript en el lado del servidor. Node.js ha ganado popularidad debido a su capacidad para crear aplicaciones escalables y su extenso ecosistema de paquetes, accesible a través de npm (Node Package Manager).
 
 En este proyecto Node.js ha sido empleado como el entorno principal para el servidor frontend, permitiendo ejecutar el código de visualización de resultados y gestionar las interacciones con la interfaz web. Se utilizó para:
 
@@ -452,7 +452,7 @@ En este proyecto Node.js ha sido empleado como el entorno principal para el serv
 \end{enumerate}
 
 \section{Express}
-Express es un framework web minimalista para Node.js, diseñado para crear aplicaciones web y APIs de manera sencilla y eficiente. Nos ofrece una estructura flexible y una serie de herramientas que nos permiten gestionar rutas, peticiones HTTP y el middleware necesario para agregar funcionalidades adicionales a una aplicación. Al ser ligero y altamente configurable Express resulta ideal para construir aplicaciones escalables y robustas en entornos de desarrollo modernos.
+Express \cite{brown_node_express} es un framework web minimalista para Node.js, diseñado para crear aplicaciones web y APIs de manera sencilla y eficiente. Nos ofrece una estructura flexible y una serie de herramientas que nos permiten gestionar rutas, peticiones HTTP y el middleware necesario para agregar funcionalidades adicionales a una aplicación. Al ser ligero y altamente configurable Express resulta ideal para construir aplicaciones escalables y robustas en entornos de desarrollo modernos.
 
 En el contexto de este proyecto Express ha sido fundamental para:
 
@@ -518,7 +518,7 @@ En este proyecto Trello ha sido utilizado para organizar las diferentes etapas d
 En la figura 3.3 podemos ver el tablero de Trello empleado durante este proyecto, incluyendo muchas de las tarjetas empleadas distribuir las tareas a realizar.
 
 \section{Postman} 
-Postman es una herramienta utilizada para probar y desarrollar APIs, que permite a los desarrolladores enviar peticiones HTTP a un servidor y verificar las respuestas de manera intuitiva. Su interfaz gráfica facilita la creación de peticiones \texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE}, entre otras, y ofrece funcionalidades avanzadas como la creación de colecciones, pruebas automáticas y la posibilidad de compartir entornos de trabajo.
+Postman \cite{postman_api_documentation} es una herramienta utilizada para probar y desarrollar APIs, que permite a los desarrolladores enviar peticiones HTTP a un servidor y verificar las respuestas de manera intuitiva. Su interfaz gráfica facilita la creación de peticiones \texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE}, entre otras, y ofrece funcionalidades avanzadas como la creación de colecciones, pruebas automáticas y la posibilidad de compartir entornos de trabajo.
 
 En el contexto de este proyecto, Postman ha sido utilizado para:
 
