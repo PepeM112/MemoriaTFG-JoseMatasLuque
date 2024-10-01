@@ -246,7 +246,7 @@ The development of this project has involved numerous technologies, with the pri
 % En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
 
 
-El Marco Común Europeo de Referencia para las Lenguas (CEFR) es el estándar ampliamente aceptado en Europa y otras regiones para evaluar las competencias lingüísticas de un hablante. En este marco las habilidades son clasificadas utilizando una escala de seis niveles, yendo desde A1 (básico) hasta C2 (maestría), permitiendo obtener una referencia clara sobre el progreso de los estudiantes en el dominio de un idioma. Este estándar ha sido popularizado no sólo en entornos educativos, sino también en el entorno laboral, donde a menudo resulta crucial contar con competencias de idiomas.
+El Marco Común Europeo de Referencia para las Lenguas (CEFRL) es el estándar ampliamente aceptado en Europa y otras regiones para evaluar las competencias lingüísticas de un hablante. En este marco las habilidades son clasificadas utilizando una escala de seis niveles, yendo desde A1 (básico) hasta C2 (maestría), permitiendo obtener una referencia clara sobre el progreso de los estudiantes en el dominio de un idioma. Este estándar ha sido popularizado no sólo en entornos educativos, sino también en el entorno laboral, donde a menudo resulta crucial contar con competencias de idiomas.
 
 Partiendo de esto, el proyecto original que sirve de punto de partida para este trabajo buscaba aplicar este sistema de evaluación al popular lenguaje de programación Python. El objetivo era analizar  distintas construcciones o patrones de código, asignándoles un nivel CEFR acorde a los elementos encontrados. Esto ofrecía una forma ágil de medir el nivel de competencia de un programador, brindando una herramienta útil para educadores o desarrolladores.
 
@@ -263,7 +263,7 @@ Con estas mejoras mi trabajo ofrece una visión renovada del proyecto original, 
 La memoria de este trabajo está estructurada de la siguiente manera:
 
 \begin{itemize}
-    \item \textbf{Capítulo 1: Introducción.} Explicación del contexto del proyecto realizado y una brevemente introducción a los objetivos del mismo.
+    \item \textbf{Capítulo 1: Introducción.} Explicación del contexto del proyecto realizado y uuna brevemente introducción a los objetivos del mismo.
     \item \textbf{Capítulo 2: Objetivos.} Explicación del objetivo general del proyecto, así como el listado de los objetivos más específicos y la planificación seguida durante el desarrollo.
     \item \textbf{Capítulo 3: Estado del arte.} Explicación de las tecnologías y herramientas involucradas en el proyecto.
     \item \textbf{Capítulo 4: Diseño e implementación.} Explicación detallada del proceso de desarrollo del proyecto.
@@ -400,7 +400,7 @@ En el contexto de este proyecto Python ha sido utilizado como lenguaje principal
 \section{HTML}
 HTML (HyperText Markup Language) \cite{duckett_html_css} es el lenguaje de marcado estándar para la creación y estructuración de documentos en la web. Define la estructura básica de las páginas web mediante el uso de etiquetas y atributos que organizan el contenido en elementos como encabezados, párrafos, listas, enlaces y multimedia. HTML proporciona el esqueleto de las páginas web, permitiendo a los navegadores interpretar y mostrar el contenido de manera coherente y estructurada.
 
-En concreto, se utilizó HTML5, la versión más reciente del lenguaje, que introduce mejoras significativas con respecto a sus predecesores. HTML5 incluye nuevas etiquetas semánticas que mejoran la estructura del documento y la accesibilidad como \texttt{header}, \texttt{footer}, \texttt{article} y \texttt{section}. Estas etiquetas no sólo proporcional una estructura más clara y lógica para los documentos, sino que también facilitan la optimización para motores de búsqueda (SEO) y la integración con tecnologías modernas. Además, HTML5 soporta de manera nativa elementos multimedia como \texttt{video} y \texttt{audio}, eliminando la hasta ahora necesaria incorporación de plugins adicionales y permitiendo una experiencia de usuario más rica y fluida.
+En concreto, se utilizó HTML5, la versión más reciente del lenguaje, que introduce mejoras significativas con respecto a sus predecesores. HTML5 incluye nuevas etiquetas semánticas que mejoran la estructura del documento y la accesibilidad como \texttt{header}, \texttt{footer}, \texttt{article} y \texttt{section}. Estas etiquetas no sólo proporcionan una estructura más clara y lógica para los documentos, sino que también facilitan la optimización para motores de búsqueda (SEO) y la integración con tecnologías modernas. Además, HTML5 soporta de manera nativa elementos multimedia como \texttt{video} y \texttt{audio}, eliminando la hasta ahora necesaria incorporación de plugins adicionales y permitiendo una experiencia de usuario más rica y fluida.
 
 En este proyecto, HTML ha sido utilizado para construir y organizar la interfaz web, a fin de ofrecer una presentación moderna y funcional de los resultados del análisis.
 
@@ -531,9 +531,9 @@ Postman ha sido de especial importancia para garantizar la calidad y fiabilidad 
 
 \section{Pycefr}
 
-Pycefr es una herramienta de análisis de código Python, que permite realizar análisis de repositorios de código alojados en GitHub. Para ello descarga el código y recaba los elementos de Python existentes, otorgándoles una puntuación siguiendo el estándar CEFRL (Common European Framework of Reference for Languages).
+Pycefr es una herramienta de análisis de código Python, que permite realizar análisis de repositorios de código alojados en GitHub. Para ello descarga el código y recaba los elementos de Python existentes, otorgándoles una puntuación siguiendo el estándar CEFRL (Common European Framework of Reference for Languages). Los niveles de cada elemento fueron asignados mediante votaciones de usuarios, quienes otorgaban a cada uno de estos elementos de Python una dificultad entre A1 y C2.
 
-Realizado el análisis, obtenemos varios archivos de resultados. Pycefr otorga también la posibilidad de crear archivos HTML con el objetivo de facilitar la visualización de estos resultados, listándonos todos los elementos encontrados junto con su respectiva puntuación.
+Realizado el análisis, obtenemos varios archivos de resultados con el número de elementos de cada tipo y su nivel. Pycefr otorga también la posibilidad de crear archivos HTML con el objetivo de facilitar la visualización de estos resultados, listándonos todos los elementos encontrados junto con su respectiva puntuación.
 
 Pycefr sido de especial relevancia en este proyecto, pues el propósito de éste ha sido su rediseño y extensión.
 
@@ -624,7 +624,43 @@ En lo relativo al backend encontramos la parte del proyecto encargada de procesa
 \begin{itemize}
     \item \textbf{Extensión del análisis del repositorio }, incluyendo información relevante sobre el historial del mismo y de los usuarios que han participado en él. En caso de analizar un directorio local el programa comprobará antes si forma parte de un repositorio en GitHub. En caso de ser así, preguntará al usuario si prefiere analizar directamente el repositorio en cuestión en lugar de los archivos locales. Las ventajas que tiene esto son (1) el directorio local puede no estar actualizado con los últimos cambios subidos al repositorio, de modo que al analizar directamente la versión de GitHub nos aseguramos de estar analizando la última versión compartida, y (2) nos añade a los resultados del análisis esa información referente a GitHub, en lugar de únicamente la del código.
 
-    \item \textbf{Mejora del archivo resultante del análisis} para facilitar su posterior tratamiento. Originalmente se generaban dos archivos equivalentes en formatos JSON y CSV. Aunque ambos formatos son ampliamente utilizados para el análisis de datos, hemos optado por mantener únicamente el formato JSON debido a su mayor flexibilidad para estructurar y manipular información. A diferencia del CSV, que se ajusta mejor a datos tabulares con campos claramente definidos y fijos, el JSON permite cambios más dinámicos en la estructura de los datos sin la necesidad de realizar ajustes constantes para que los campos se adapten a un formato rígido. Esto hace que el JSON sea más adecuado para futuras reestructuraciones del archivo, evitando la complejidad asociada a modificar archivos CSV cuando la estructura de los datos cambia significativamente. Al prescindir del archivo CSV, simplificamos el proceso de manejo y actualización de los datos, permitiendo una mayor versatilidad en su tratamiento y reduciendo las dificultades asociadas al ajuste de formatos estáticos como el CSV.
+    \item \textbf{Mejora del archivo resultante del análisis} para facilitar su posterior tratamiento. Originalmente se generaban dos archivos equivalentes en formatos JSON y CSV. Aunque ambos formatos son ampliamente utilizados para el análisis de datos, hemos optado por mantener únicamente el formato JSON debido a su mayor flexibilidad para estructurar y manipular información. A diferencia del CSV, que se ajusta mejor a datos tabulares con campos claramente definidos y fijos, el JSON permite cambios más dinámicos en la estructura de los datos sin la necesidad de realizar ajustes constantes para que los campos se adapten a un formato rígido. Esto hace que el JSON sea más adecuado para futuras reestructuraciones del archivo, evitando la complejidad asociada a modificar archivos CSV cuando la estructura de los datos cambia significativamente. Al prescindir del archivo CSV, simplificamos el proceso de manejo y actualización de los datos, permitiendo una mayor versatilidad en su tratamiento y reduciendo las dificultades asociadas al ajuste de formatos estáticos como el CSV. En la siguiente figura podemos ver la estructura del nuevo archivo JSON generado:
+
+    \newpage
+    
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=\linewidth]{img/example_results_json.png}
+        \caption{Estructura del JSON generado}
+        \label{fig:enter-label}
+    \end{figure}
+
+    Como se aprecia en la figura 4.1, el archivo se divide en dos grandes categorías.
+
+    \begin{enumerate}
+        \item \textbf{elements: } Contiene una lista de los elementos encontrados. Se mencionan el tipo (class), nivel (level) y número de apariciones (numberOfInstancias) de cada uno.
+
+        \item \textbf{repoInfo: } Contiene la información relativa al repositorio. A su vez se divide en tres grupos:
+        \begin{itemize}
+            \item \textbf{data: } Información general del repósitorio. Encontramos el nombre del repositorio (name), la URL (url), la descripción en caso de tenerla (description), la fecha de creación (createdDate), la fecha del último cambio (lastUpdateDate) y sobre el autor del repositorio el nombre (name), imagen de perfil (avatar) y URL de su perfil (url\_profile).
+            \item \textbf{commits: } Información de los commits del repositorio. Incluye una lista de los autores que han realizado al menos un commit, dando de ellos su nombre (name), el nombre de usuario de GitHub (github\_user), las líneas de código modificadas en total (loc), el número total de commits (commits), una estimación del tiempo invertido (total\_hours) y el total de archivos modificados (total\_files\_modified). Cabe mencionar que la estimación del total de horas se realiza en función del número total de commits y del tiempo que haya pasado entre ellos, realizando una media. Este valor puede no ser preciso en caso de que el número de commits sea muy bajo o haya mucha variación de tiempo entre ellos. Por último, las propiedades \textit{name} y \textit{github\_user} suelen tener el mismo valor, pero el usuario tiene la posibilidad de cambiar esto, de modo que es necesario añadir ambos campos.
+            \item \textbf{contributors: } Información de los usuarios GitHub que han participado en este proyecto. Acompaña al apartado interior, pero la información se extrae de manera distinta, es por ello que está separada. Incluye una lista de los usuarios que han realizado al menos un commit, dando de ellos su nombre (name), imagen de perfil (avatar), URL del perfil (profile\_url) y número total de commits (commits). El número de elementos en este apartado suele coincidir con el de commits, pero puede ser diferente por varios motivos. 
+            
+            El primero de ellos es que en este apartado, debido a la respuesta obtenida tras solicitar esta información, se utiliza como \textit{name} lo que en \textit{commits} es \textit{github\_user}. Esto tiene como consecuencia que si un mismo usuario de GitHub utilizara nombres (\textit{name} en \textit{commits}) diferentes, en \textit{commits} habría dos entradas para este usuario, mientras que en contributors sólo una, pues es el mismo usuario. 
+            
+            El segundo motivo es que ciertos procesos automáticos de GitHub, como la aprobación de un \textit{pull request}, queda registrado como realizado por GitHub en lugar de por el usuario. Esto se hace usando un name distinto, pero manteniendo el \textit{github\_user} del autor.
+
+            En la figura 4.2, donde se muestra la sección ``repoInfo'' del archivo resultante de realizar el análisis en nuestro propio repositorio, se pueden ver estos dos casos. En el proyecto han realizado cambios tres usuarios: el autor del proyecto original, anapgh, el tutor de este proyecto, gregoriorobles y un servidor, PepeM112. En el apartado de \textit{contributors} sí aparecen bien representados estos tres usuarios, mientras que en \textit{commits} encontramos un total de cinco. Los dos usuarios extras son los que tienen como \textit{name} los valores ``jmatas'' y ``GitHub''. El primero de éstos refleja que yo he realizado cambios utilizando varios name distintos, mientras que el segundo refleja el caso de las acciones que se registran como hechas por GitHub, a pesar de incluir el \textit{github\_user} del autor.
+\newpage
+\begin{figure} [H]
+    \centering
+    \includegraphics[height=\textheight]{img/example_results_json_pycefr.png}
+    \caption{Sección \textit ``repoInfo'' del análisis del repositorio pycefr}
+    \label{fig:enter-label}
+\end{figure}
+            
+        \end{itemize}
+    \end{enumerate}
 
     \item \textbf{Añadida visualización de resultados desde la terminal}, en caso de que el usuario prefiera una vista rápida de los resultados sin tener que depender de la parte web. 
 \end{itemize}
@@ -645,9 +681,9 @@ En lo relativo al backend encontramos la parte del proyecto encargada de procesa
   \label{fig:execution_local}
 \end{figure}
 
-En la figura 4.1 podemos ver un ejemplo de ejecución del análisis de un directorio local. Introducimos la opción \textit{-d} para analizar un directorio local, y la dirección \textit{``,''} para referirnos al repositorio en que nos encontramos actualmente, esto es, el de la propia aplicación. 
+En la figura 4.3 podemos ver un ejemplo de ejecución del análisis de un directorio local. Introducimos la opción \textit{-d} para analizar un directorio local, y la dirección \textit{``,''} para referirnos al repositorio en que nos encontramos actualmente, esto es, el de la propia aplicación. 
 
-Se nos muestra un primer mensaje indicando que se ha encontrado una configuración Git válida, preguntándonos si estamos interesados en analizar el repositorio original. Este mensaje se corresponde con el primer paso del flujo de ejecución mostrado en la figura 4.2. Se comprueba si el código contiene información relativa a Git, y en caso de ser así, da al usuario la opción de analizar el repositorio directamente de GitHub, en lugar de analizar el directorio local. En este ejemplo se ha indicado al programa que no, de modo que procede con el análisis del proyecto, mostrando los pasos realizados \textit{"Analysing code"} y \textit{"Saving data"}, y finalmente los resultados por consola.
+Se nos muestra un primer mensaje indicando que se ha encontrado una configuración Git válida, preguntándonos si estamos interesados en analizar el repositorio original. Este mensaje se corresponde con el primer paso del flujo de ejecución mostrado en la figura 4.4. Se comprueba si el código contiene información relativa a Git, y en caso de ser así, da al usuario la opción de analizar el repositorio directamente de GitHub, en lugar de analizar el directorio local. En este ejemplo se ha indicado al programa que no, de modo que procede con el análisis del proyecto, mostrando los pasos realizados \textit{"Analysing code"} y \textit{"Saving data"}, y finalmente los resultados por consola.
 
 Finalmente se añadieron también otras dos opciones de ejecución: La primera de éstas es 
 
@@ -669,15 +705,15 @@ Utilizamos el término ``frontend'' para la parte del proyecto encargada de la w
 
 La versión original del frontend es funcional, en el sentido de que cumple su labor, pero presentaba una estructura muy básica y poco modular. Todo el código relevante estaba contenido en un único archivo `main.js`, que generaba dinámicamente un archivo HTML a partir de unas plantillas e insertaba directamente toda la información en la página. Esto no solo dificultaba la escalabilidad del proyecto, sino que también limitaba la separación de responsabilidades entre las diferentes partes del frontend y hacía más complicado el mantenimiento del código a largo plazo.
 
-En este rediseño completo del frontend hemos implementado una estructura más profesional y escalable. Se han organizado los recursos del proyecto en carpetas separadas, como `public`, `assets`, `html`, `css` y `js`, siguiendo las buenas prácticas del desarrollo web moderno. Asimismo, se ha incluido un archivo `package.json`, fundamental para gestionar las dependencias del proyecto y definir los scripts necesarios para su ejecución. El uso de `npm` como gestor de dependencias permite que el proyecto sea fácilmente reproducible en cualquier entorno, garantizando que todas las bibliotecas y módulos requeridos puedan ser instalados de manera automática y coherente.
+En este rediseño completo del frontend hemos implementado una estructura más profesional y escalable. Se han organizado los recursos del proyecto en carpetas separadas, como ``public'', ``assets'', ``html'', ``css'' y ``js''`, siguiendo las buenas prácticas del desarrollo web moderno. Asimismo, se ha incluido un archivo `package.json`, fundamental para gestionar las dependencias del proyecto y definir los scripts necesarios para su ejecución. El uso de `npm` como gestor de dependencias permite que el proyecto sea fácilmente reproducible en cualquier entorno, garantizando que todas las bibliotecas y módulos requeridos puedan ser instalados de manera automática y coherente.
 
-Para el servidor, hemos adoptado `Express.js` como framework, creando un archivo `server.js` dedicado a cargar y gestionar el servidor web, lo que no existía en la versión anterior. También se han implementado rutas específicas para la API (`apiRoutes.js`) y para servir las páginas HTML (`htmlRoutes.js`), lo que proporciona una clara separación entre la lógica de backend y la presentación de los datos. Esto mejora el manejo de peticiones y la organización del código, haciendo más eficiente la gestión del servidor y la comunicación entre las distintas capas de la aplicación.
+Para el servidor, hemos adoptado ``Express.js'' como framework, creando un archivo `server.js` dedicado a cargar y gestionar el servidor web, lo que no existía en la versión anterior. También se han implementado rutas específicas para la API (``apiRoutes.js'') y para servir las páginas HTML (``htmlRoutes.js''), lo que proporciona una clara separación entre la lógica de backend y la presentación de los datos. Esto mejora el manejo de peticiones y la organización del código, haciendo más eficiente la gestión del servidor y la comunicación entre las distintas capas de la aplicación.
 
-Además, el uso del `package.json` facilita la futura definición de scripts para tareas comunes como la ejecución del servidor en modo desarrollo, la instalación de dependencias y el despliegue. Esto asegura que todos los colaboradores del proyecto puedan utilizar los mismos comandos y configuraciones, evitando problemas derivados de configuraciones locales.
+Además, el uso del ``package.json'' facilita la futura definición de scripts para tareas comunes como la ejecución del servidor en modo desarrollo, la instalación de dependencias y el despliegue. Esto asegura que todos los colaboradores del proyecto puedan utilizar los mismos comandos y configuraciones, evitando problemas derivados de configuraciones locales.
 
-En resumen, este rediseño transforma el frontend en un proyecto más modular, mantenible y alineado con estándares profesionales, lo que facilita tanto su evolución futura como la colaboración en equipo. La inclusión de `Express.js`, junto con el uso de `npm` y un `package.json` bien definido, asegura que la gestión de dependencias y la ejecución del proyecto sean eficientes y consistentes.
+En resumen, este rediseño transforma el frontend en un proyecto más modular, mantenible y alineado con estándares profesionales, lo que facilita tanto su evolución futura como la colaboración en equipo. La inclusión de `Express.js`, junto con el uso de ``npm'' y un ``package.json'' bien definido, asegura que la gestión de dependencias y la ejecución del proyecto sean eficientes y consistentes.
 
-A continuación podemos observar el cambio significativo en la estructura del frontend tras el rediseño. La figura 4.3 muestra el árbol de archivos original, donde todo el código estaba contenido en un único archivo `main.js`. Por el contrario, la figura 4.4 ilustra el nuevo diseño, que adopta una estructura modular y organizada en carpetas, incluyendo archivos específicos para las rutas de la API, los estilos, los scripts, y el uso de `Express.js` para la gestión del servidor.
+A continuación podemos observar el cambio significativo en la estructura del frontend tras el rediseño. La figura 4.5 muestra el árbol de archivos original, donde todo el código estaba contenido en un único archivo `main.js`. Por el contrario, la figura 4.6 ilustra el nuevo diseño, que adopta una estructura modular y organizada en carpetas, incluyendo archivos específicos para las rutas de la API, los estilos, los scripts, y el uso de `Express.js` para la gestión del servidor.
 
 
 \vspace{2em}
@@ -713,7 +749,7 @@ Toda esta reestructuración implica naturalmente un cambio absoluto en el funcio
     \label{fig:final_frontend}
 \end{figure}
 
-En el \textbf{flujo original}, que podemos ver en la figura 4.5, ejecutamos casi exclusivamente el archivo 'main.js', el cual realiza todo el trabajo. Éste busca en el sistema archivos de resultados JSON y extrae de ellos la información relevante a mostrar. Tras esto carga unas plantillas para crear dos archivos HTML:
+En el \textbf{flujo original}, que podemos ver en la figura 4.7, ejecutamos casi exclusivamente el archivo 'main.js', el cual realiza todo el trabajo. Éste busca en el sistema archivos de resultados JSON y extrae de ellos la información relevante a mostrar. Tras esto carga unas plantillas para crear dos archivos HTML:
 
 \begin{itemize}
     \item Un archivo 'index.html' que consta de un breve resumen de la información los análisis realizados. Desde aquí se puede acceder a cada análisis individual.
@@ -722,7 +758,7 @@ En el \textbf{flujo original}, que podemos ver en la figura 4.5, ejecutamos casi
 
 Una vez creados podemos visualizarlos levantando un servidor local, aunque esto no es algo incluido en el proceso original, sino que hacerlo por nosotros mismos.
 
-En \textbf{flujo actualizado} (ver figura 4.6) ha sido diseñado pensando en la flexibilidad y facilidad para una futura ampliación, añadiendo nuevos procesos y agrupando los ya existentes en archivos encargados de tareas comunes. Así, podemos definir los siguientes pasos en el proceso de ejecución:
+En \textbf{flujo actualizado} (ver figura 4.8) ha sido diseñado pensando en la flexibilidad y facilidad para una futura ampliación, añadiendo nuevos procesos y agrupando los ya existentes en archivos encargados de tareas comunes. Así, podemos definir los siguientes pasos en el proceso de ejecución:
 
 \begin{enumerate}
     \item  Comenzamos ejecutando el archivo 'server.js', el cual crea y levanta un servidor que proporcionará todo el contenido necesario, tanto las páginas web como los resultados de los análisis. 
@@ -746,7 +782,7 @@ En definitiva, uniendo ambas secciones, \textit{backend} y \textit{frontend}, ob
     \label{fig:enter-label}
 \end{figure}
 
-En la figura 4.7 podemos visualizar de manera esquemática la arquitectura del proyecto completo, agrupando los archivos involucrado no sólo por la sección a la que pertenecen sino por la tarea que cumplen.
+En la figura 4.9 podemos visualizar de manera esquemática la arquitectura del proyecto completo, agrupando los archivos involucrado no sólo por la sección a la que pertenecen sino por la tarea que cumplen.
 
 El \textbf{backend} contiene los archivos utilizados para realizar el análisis del código. El archivo \textit{pycefrl.py} procesa la entrada del usuario. Interacciona directamente con el archivo \textit{console.py} en caso de que el usuario use el programa para visualizar datos ya existentes, puesto que éste es el archivo que procesa el mostrado de los resultados por consola. Sin embargo, durante su actividad más habitual, la del análisis de archivos, interactúa con \textit{analyzer.py}, quien realiza la gestión principal de este proceso de análisis, sirviéndose primero de la API de GitHub para obtener información en caso de necesitar, y segundo del archivo \textit{iter\_tree.py}, para navegar por el código Python a analizar. Éste a su vez se sirve de \textit{levels.py} para asignar los niveles correspondientes a los elementos Python encontrados, produciendo un archivo JSON con los resultados, cuyo nombre se corresponderá con el del proyecto analizado. Finalmente el \textit{analyzer.py} añade al JSON la información relativa a GitHub. 
 
@@ -759,7 +795,7 @@ En el \textbf{frontend} se incluyen todos los archivos involucrados en el funcio
 
     \item \textbf{CSS:} Archivos CSS que definen los estilos de las páginas. Son empleados también por los archivos HTML.
     
-    \item \textbf{HTML:} Archivos HTML que conforman las plantillas de las páginas mostradas. Utilizan la lógica de los archivos JavaScript para obtener los datos y mostrarlos en la página, y aplican los estilos especificados en los archivos CSS indicados.
+    \item \textbf{HTML:} Archivos HTML que conforman las plantillas de las páginas mostradas. Utilizan la lógica de los archivos JavaScript para obtener los datos y mostrarlos en la página, y aplican los estilos espeficiados en los archivos CSS indicados.
 
     \item \textbf{npm:} Incluye los módulos de Node.js utilizados en el proyecto.
 \end{itemize}
